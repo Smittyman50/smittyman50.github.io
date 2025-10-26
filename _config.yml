@@ -1,0 +1,15 @@
+title: "Michael Smith"
+description: "Portfolio showcasing 30+ years of experience in networking, cloud architecture, and AI/ML development."
+theme: jekyll-theme-minimal
+
+# Optional settings
+logo: /images/profile.jpg
+show_downloads: false
+github:
+  is_project_page: false
+  is_user_page: true
+social_links:
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/michaeljsmith35/
+  - name: Email
+    url: mailto:1973.mjsmith@gmail.com
