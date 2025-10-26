@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Michael Smith
 
-IT and Cloud Architect | 30+ years experience | PMP • CISSP • AWS Certified
+Strategic IT Leader | MBA | CISSP, PMP, AWS Certified | Enterprise Networking & Process Improvement Expert | Driving Innovation & Operational Excellence
 
 Welcome to my technical portfolio. This site showcases some of my recent projects in networking, automation, and AI/ML.
 
@@ -11,7 +11,7 @@ Welcome to my technical portfolio. This site showcases some of my recent project
 ---
 
 ## 📰 Articles & Thought Leadership
-- [Designing Cloud-Native Networks for Enterprise Resilience](https://www.linkedin.com/...)
+- [Designing Cloud-Native Networks for Enterprise-Scale Resilience](https://www.linkedin.com/posts/michaeljsmith35_cloudarchitecture-networking-aws-activity-7317914350759878659-RNBT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAGZs9ABqQC0sGElZg4kSRHH0pTg2-Aog9I)
 - [Terraform & Ansible in My Home Lab](https://www.linkedin.com/...)
 
 ---
