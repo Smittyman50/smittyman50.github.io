@@ -1,6 +1,6 @@
 title: "Michael Smith"
 description: "Portfolio showcasing 30+ years of experience in networking, cloud architecture, and AI/ML development."
-theme: jekyll-theme-minimal
+theme: jekyll-remote-theme
 
 # Optional settings
 logo: /images/profile.jpg
