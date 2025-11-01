@@ -11,7 +11,9 @@ Welcome to my technical portfolio. This site showcases some of my recent project
 ---
 
 ## 📰 Articles & Thought Leadership
-- [Building a Second Brain: Zettelkasten, Obsidian, and the Future of AI-Augmented Knowledge Work] (https://www.linkedin.com/pulse/building-second-brain-zettelkasten-obsidian-future-knowledge-smith-v2bbe)
+- [Embracing Change: A Strategic Mindset for Long-Term Success](https://www.linkedin.com/pulse/embracing-change-strategic-mindset-long-term-success-mike-smith-7snic)
+- [Building a Proxmox Cluster at Home: Engineering a Scalable and Resilient Lab with Mini-PCs and Enterprise Tools](https://www.linkedin.com/pulse/building-proxmox-cluster-home-engineering-scalable-resilient-smith-tkgqc)
+- [Building a Second Brain: Zettelkasten, Obsidian, and the Future of AI-Augmented Knowledge Work](https://www.linkedin.com/pulse/building-second-brain-zettelkasten-obsidian-future-knowledge-smith-v2bbe)
 - [Bridging the Gap: Designing Cloud-Native Networks for Enterprise-Scale Resilience](https://www.linkedin.com/pulse/bridging-gap-designing-cloud-native-networks-resilience-mike-smith-5uw2c/)
 
 ---
