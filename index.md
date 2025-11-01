@@ -1,8 +1,8 @@
 # 👋 Hi, I'm Michael Smith
 
-Strategic IT Leader | CISSP, PMP, AWS Certified | Enterprise Networking & Process Improvement Expert
+**Strategic IT Leader** | **CISSP, PMP, AWS Certified** | **Enterprise Networking & Process Improvement Expert**
 
-**Welcome to my technical portfolio. This site showcases some of my recent projects in networking, automation, and AI/ML.**
+Welcome to my technical portfolio. This site showcases some of my recent projects in networking, automation, and AI/ML.
 
 ---
 
@@ -11,6 +11,8 @@ Strategic IT Leader | CISSP, PMP, AWS Certified | Enterprise Networking & Proces
 ---
 
 ## 📰 Articles & Thought Leadership
+- [Teaching My Second Brain to Think: How I Took My AI-Integrated Obsidian Vault to the Next Level](https://www.linkedin.com/pulse/teaching-my-second-brain-think-how-i-took-obsidian-vault-mike-smith-rwjyc/)
+- [The Hidden Costs of Cloud: A Practical Guide to FinOps for IT Leaders](https://www.linkedin.com/pulse/hidden-costs-cloud-practical-guide-finops-leaders-mike-smith-zkdwc)
 - [Embracing Change: A Strategic Mindset for Long-Term Success](https://www.linkedin.com/pulse/embracing-change-strategic-mindset-long-term-success-mike-smith-7snic)
 - [Building a Proxmox Cluster at Home: Engineering a Scalable and Resilient Lab with Mini-PCs and Enterprise Tools](https://www.linkedin.com/pulse/building-proxmox-cluster-home-engineering-scalable-resilient-smith-tkgqc)
 - [Building a Second Brain: Zettelkasten, Obsidian, and the Future of AI-Augmented Knowledge Work](https://www.linkedin.com/pulse/building-second-brain-zettelkasten-obsidian-future-knowledge-smith-v2bbe)
