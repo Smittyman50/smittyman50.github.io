@@ -11,8 +11,8 @@ Welcome to my technical portfolio. This site showcases some of my recent project
 ---
 
 ## 📰 Articles & Thought Leadership
-- [Designing Cloud-Native Networks for Enterprise-Scale Resilience](https://www.linkedin.com/pulse/bridging-gap-designing-cloud-native-networks-resilience-mike-smith-5uw2c/)
-- [Terraform & Ansible in My Home Lab](https://www.linkedin.com/...)
+- [Building a Second Brain: Zettelkasten, Obsidian, and the Future of AI-Augmented Knowledge Work] (https://www.linkedin.com/pulse/building-second-brain-zettelkasten-obsidian-future-knowledge-smith-v2bbe)
+- [Bridging the Gap: Designing Cloud-Native Networks for Enterprise-Scale Resilience](https://www.linkedin.com/pulse/bridging-gap-designing-cloud-native-networks-resilience-mike-smith-5uw2c/)
 
 ---
 
