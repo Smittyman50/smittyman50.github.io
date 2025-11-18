@@ -22,22 +22,28 @@ section {
   outline: 2px solid green !important;
 }
 
-/* Desktop / large screens: widen the layout slightly */
-@media print, screen and (min-width: 961px) {
+/* Desktop / large screens: fluid layout that scales with window size */
+@media screen and (min-width: 961px) {
   .wrapper {
-    width: 1100px;    /* was 860px */
-    margin: 0 auto;
+    width: 90%;          /* take most of the viewport width */
+    max-width: 1200px;   /* but don't get absurdly wide */
+    margin: 0 auto;      /* keep it centered */
   }
 
+  /* Keep the left header at a fixed width (theme default is ~270px) */
+  header {
+    width: 260px;
+  }
+
+  /* Make the right content column fill the remaining space */
   section {
-    width: 800px;     /* was 500px */
+    width: calc(100% - 280px);  /* wrapper width minus header + a bit of spacing */
     padding-bottom: 50px;
   }
 }
 
-/* Optional: tables use full width of the content column */
+/* Tables use full width of the content column and resize nicely */
 table {
   width: 100%;
   table-layout: auto;
 }
-
