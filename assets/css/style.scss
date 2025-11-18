@@ -1,4 +1,4 @@
----
+hi---
 ---
 
 @import "{{ site.theme }}";
@@ -57,6 +57,45 @@ pre, code {
   color: #0f0 !important;               /* Optional: green code text (readable on black) */
 }
 
+/* ----- Dark Theme: Table Fixes ----- */
+
+table {
+  background: #111 !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+thead th {
+  background: #222 !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+tbody td {
+  background: #111 !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+tbody tr:nth-child(odd) td {
+  background: #151515 !important;   /* subtle row striping for readability */
+}
+
+tbody tr:nth-child(even) td {
+  background: #111 !important;
+}
+
+table a {
+  color: #4da6ff !important;        /* white text would hide links */
+}
+
+table a:hover {
+  color: #80cfff !important;
+}
+
+th, td {
+  border-color: #444 !important;
+}
 /* Desktop / large screens: fluid layout that scales with window size */
 @media screen and (min-width: 961px) {
   .wrapper {
