@@ -3,19 +3,27 @@
 
 @import "{{ site.theme }}";
 
+/* Desktop: widen the layout */
 @media screen and (min-width: 861px) {
+
+  /* Increase total page width */
   .wrapper {
-    max-width: none;   /* no hard cap */
-    width: 90%;        /* take up most of the viewport */
-    margin: 0 auto;    /* stay centered */
+    max-width: 1100px;
   }
 
+  /* Keep header (left sidebar) reasonable */
   header {
     width: 260px;
   }
 
+  /* Widen right-hand content column */
   section {
-    max-width: 1000px; /* keep lines readable */
+    max-width: 800px;
   }
 }
 
+/* Optional: tables use full width of the content column */
+table {
+  width: 100%;
+  table-layout: auto;
+}
