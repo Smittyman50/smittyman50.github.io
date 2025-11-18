@@ -4,7 +4,12 @@ Welcome to my technical portfolio. This site showcases some of my recent project
 
 ---
 
-## 🧰 Featured Projects
+## 🔍 What You'll Find Here
+
+This site is organized into a few focus areas:
+
+- **[AI & Machine Learning](./ai-ml.md)**  
+  Applied AI/ML projects, including emotion recognition, text classification, and practical ML tooling.
 
 ---
 
