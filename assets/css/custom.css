@@ -1,0 +1,20 @@
+/* Expand content to full width */
+body {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* The Minimal theme constrains <section> to ~600px */
+section {
+  max-width: none !important;
+  width: 100% !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+/* Make tables look good on wide layouts */
+table {
+  width: 100%;
+  table-layout: auto;
+}
