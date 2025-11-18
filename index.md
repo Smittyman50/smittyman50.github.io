@@ -1,4 +1,4 @@
-**Strategic IT Leader** | **CISSP, PMP, AWS Certified** | **Enterprise Networking & Process Improvement Expert**
+**Strategic IT Leader** | **CISSP, PMP, AWS Certified** | **Enterprise Networking, Cloud Adoption, & AI/ML Expert**
 
 Welcome to my technical portfolio. This site showcases some of my recent projects in networking, automation, and AI/ML.
 
