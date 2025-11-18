@@ -22,27 +22,22 @@ section {
   outline: 2px solid green !important;
 }
 
-/* Desktop: widen overall layout and content column */
-@media screen and (min-width: 861px) {
+/* Desktop / large screens: widen the layout slightly */
+@media print, screen and (min-width: 961px) {
   .wrapper {
-    max-width: none;   /* allow wrapper to grow */
-    width: 95%;        /* fill most of the viewport */
-    margin: 0 auto;    /* keep it centered */
-  }
-
-  header {
-    width: 260px;      /* left column for profile/About */
+    width: 1100px;    /* was 860px */
+    margin: 0 auto;
   }
 
   section {
-    margin-left: 280px; /* stay to the right of header */
-    max-width: none;    /* remove 600px cap */
-    width: auto;        /* let the section expand */
+    width: 800px;     /* was 500px */
+    padding-bottom: 50px;
   }
 }
 
-/* Tables use full width of the content column */
+/* Optional: tables use full width of the content column */
 table {
   width: 100%;
   table-layout: auto;
 }
+
