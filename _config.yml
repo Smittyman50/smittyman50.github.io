@@ -1,9 +1,8 @@
 title: "Michael Smith"
 description: "Portfolio showcasing 30+ years of experience in networking, cloud architecture, and AI/ML development."
 remote_theme: pages-themes/minimal@v0.2.0
-theme: minimal-mistakes-jekyll
-#plugins:
-#- jekyll-remote-theme
+plugins:
+- jekyll-remote-theme
 
 # Optional settings
 logo: /images/profile.jpg
@@ -16,12 +15,3 @@ social_links:
     url: https://www.linkedin.com/in/michaeljsmith35/
   - name: Email
     url: mailto:1973.mjsmith@gmail.com
-
-# include:
-#   - assets/css/custom.css
-
-# defaults:
-#   - scope:
-#       path: ""
-#       values:
-#         head: head-custom.html
