@@ -3,6 +3,65 @@
 
 @import "{{ site.theme }}";
 
+/* ----- Dark Theme Overrides for Minimal Theme ----- */
+
+body {
+  background-color: #000 !important;    /* Pure black background */
+  color: #fff !important;               /* White text */
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff !important;
+}
+
+/* Links */
+a {
+  color: #40c4ff !important;            /* Light blue links */
+}
+
+a:hover {
+  color: #80cfff !important;
+}
+
+/* Left sidebar (header) */
+header {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+header h1, header p {
+  color: #fff !important;
+}
+
+/* Horizontal rules */
+hr {
+  border-top: 1px solid #444 !important;
+}
+
+/* Tables */
+table {
+  color: #fff !important;
+  background: #111 !important;
+  border-color: #444 !important;
+}
+
+th, td {
+  border-color: #444 !important;
+}
+
+/* Code blocks */
+pre, code {
+  background: #111 !important;
+  color: #0f0 !important;               /* Optional: green code text (readable on black) */
+}
+
+/* Site wrapper (layout container) */
+.wrapper {
+  background: transparent !important;
+}
+
 /* Desktop / large screens: fluid layout that scales with window size */
 @media screen and (min-width: 961px) {
   .wrapper {
