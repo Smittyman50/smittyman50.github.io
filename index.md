@@ -10,11 +10,15 @@ This site is organized into a few focus areas:
 
 - **[AI & Machine Learning](./ai-ml.md)**  
   Applied AI/ML projects, including emotion recognition, text classification, and practical ML tooling.
+- **[Network & Infrastructure Automation](./network-automation.md)**  
+  Cisco and MikroTik configuration, Proxmox and TrueNAS automation, Terraform/Ansible workflows, and cloud networking patterns.
 
 ---
 
 ## 📰 Articles & Thought Leadership
 
+- [Rolling for Insight: What Role-Playing Games Teach Us About Leadership, Teamwork, and Creativity](https://www.linkedin.com/pulse/rolling-insight-what-role-playing-games-teach-us-leadership-smith-0skic)
+- [Why I’ve Been Quiet Lately: The Power of Lifelong Learning](https://www.linkedin.com/pulse/why-ive-been-quiet-lately-power-lifelong-learning-mike-smith-h4hcc)
 - [Leadership That Delivers: Why Servant Leadership and Outcomes Still Matter](https://www.linkedin.com/pulse/leadership-delivers-why-servant-outcomes-still-matter-mike-smith-lyiec)
 - [From Clicks to Code: How I Use Terraform and Ansible to Run My Home Lab Like a Cloud](https://www.linkedin.com/pulse/from-clicks-code-how-i-use-terraform-ansible-run-my-home-mike-smith-3355c)
 - [Beyond ChatGPT: Essential AI Skills Tech Leaders Should Foster in Their Teams](https://www.linkedin.com/pulse/beyond-chatgpt-essential-ai-skills-tech-leaders-should-mike-smith-be1sc)
