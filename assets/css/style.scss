@@ -1,4 +1,4 @@
-hi---
+I'm hi---
 ---
 
 @import "{{ site.theme }}";
@@ -40,23 +40,6 @@ hr {
   border-top: 1px solid #444 !important;
 }
 
-/* Tables */
-table {
-  color: #fff !important;
-  background: #000 !important;
-  border-color: #444 !important;
-}
-
-th, td {
-  border-color: #444 !important;
-}
-
-/* Code blocks */
-pre, code {
-  background: #111 !important;
-  color: #0f0 !important;               /* Optional: green code text (readable on black) */
-}
-
 /* ----- Dark Theme: Table Fixes ----- */
 
 table {
@@ -96,6 +79,13 @@ table a:hover {
 th, td {
   border-color: #444 !important;
 }
+
+/* Code blocks */
+pre, code {
+  background: #111 !important;
+  color: #0f0 !important;               /* Optional: green code text (readable on black) */
+}
+
 /* Desktop / large screens: fluid layout that scales with window size */
 @media screen and (min-width: 961px) {
   .wrapper {
