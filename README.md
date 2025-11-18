@@ -4,11 +4,12 @@ This repository powers my GitHub Pages site: [smittyman50.github.io](https://smi
 
 It showcases select projects and thought leadership across networking, cloud, and AI/ML disciplines.
 
-### 📂 Featured Repositories
+## 📂 Featured Repositories
 
 ---
 
-### 🧠 About
+## 🧠 About
+
 With over 30 years of experience in IT, I am a technical leader who combines deep expertise in enterprise networking, cybersecurity, and cloud environments with a strategic, results-driven approach. My certifications—including CISSP, AWS, and PMP, along with former CCNP and CCDP credentials—highlight a career dedicated to mastering complex technical domains and leading high-impact initiatives.
 
 Throughout my career, I’ve specialized in designing, securing, and optimizing infrastructures for large-scale operations, ensuring they’re resilient, scalable, and aligned with business goals. My background in process improvement, coupled with an agile mindset and design thinking principles, empowers me to streamline operations and enhance team performance, fostering a culture of innovation and accountability.
