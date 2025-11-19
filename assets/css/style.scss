@@ -57,7 +57,7 @@ hr {
 /* ----- Dark Theme: Table Fixes ----- */
 
 table {
-  background: #111 !important;
+  background: #000 !important;
   color: #fff !important;
   border-color: #444 !important;
 }
@@ -69,17 +69,9 @@ thead th {
 }
 
 tbody td {
-  background: #111 !important;
+  background: #000 !important;
   color: #fff !important;
   border-color: #444 !important;
-}
-
-tbody tr:nth-child(odd) td {
-  background: #151515 !important;   /* subtle row striping for readability */
-}
-
-tbody tr:nth-child(even) td {
-  background: #111 !important;
 }
 
 table a {
