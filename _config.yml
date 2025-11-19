@@ -4,11 +4,11 @@ description: >
   <br><br>
 
   <!-- Certification Logos -->
-  <div style="display:flex; flex-wrap:wrap; gap:8px; max-width:200px;">
-    <img src="/images/aws-certified-machine-learning-specialty.png" width="80"/>
-    <img src="/images/aws-certified-solutions-architect-associate.png" width="80"/>
-    <img src="/images/aws-certified-developer-associate.png" width="80"/>
-    <img src="/images/aws-certified-sysops-administrator-associate.png" width="80"/>
+  <div style="display:flex; flex-wrap:wrap; gap:8px; max-width:260px;">
+    <img src="/images/aws-certified-machine-learning-specialty.png" width="120"/>
+    <img src="/images/aws-certified-solutions-architect-associate.png" width="120"/>
+    <img src="/images/aws-certified-developer-associate.png" width="120"/>
+    <img src="/images/aws-certified-sysops-administrator-associate.png" width="120"/>
   </div>
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
