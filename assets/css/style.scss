@@ -1,4 +1,5 @@
 ---
+
 ---
 
 @import "{{ site.theme }}";
@@ -25,10 +26,23 @@ a:hover {
   color: #80cfff !important;
 }
 
-/* Left sidebar (header) */
+/* ----- Dark Theme: Sidebar (left column) ----- */
+
 header {
-  background: #111 !important;
+  background: #000 !important;
   color: #fff !important;
+}
+
+header * {
+  color: #fff !important;
+}
+
+header a {
+  color: #4da6ff !important;
+}
+
+header a:hover {
+  color: #80cfff !important;
 }
 
 header h1, header p {
@@ -37,29 +51,51 @@ header h1, header p {
 
 /* Horizontal rules */
 hr {
-  border-top: 1px solid #444 !important;
+  border-top: 1px solid #fff !important;
 }
 
-/* Tables */
+/* ----- Dark Theme: Table Fixes ----- */
+
 table {
+  background: #000 !important;
   color: #fff !important;
-  background: #111 !important;
-  border-color: #444 !important;
+  border-color: #fff !important;
+}
+
+thead th {
+  background: #222 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+tbody td {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+table a {
+  color: #4da6ff !important;        /* white text would hide links */
+}
+
+table a:hover {
+  color: #80cfff !important;
 }
 
 th, td {
-  border-color: #444 !important;
+  border-color: #fff !important;
+}
+
+/* Make bold/strong text white in dark mode */
+strong,
+b {
+  color: #fff !important;
 }
 
 /* Code blocks */
 pre, code {
   background: #111 !important;
   color: #0f0 !important;               /* Optional: green code text (readable on black) */
-}
-
-/* Site wrapper (layout container) */
-.wrapper {
-  background: transparent !important;
 }
 
 /* Desktop / large screens: fluid layout that scales with window size */

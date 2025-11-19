@@ -38,3 +38,5 @@ This site is organized into a few focus areas:
 - [LinkedIn](https://www.linkedin.com/in/michaeljsmith35)
 - [GitHub](https://github.com/smittyman50)
 - [Email](mailto:1973.mjsmith@gmail.com)
+
+<!-- trigger rebuild -->
