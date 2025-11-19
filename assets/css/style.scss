@@ -51,7 +51,7 @@ header h1, header p {
 
 /* Horizontal rules */
 hr {
-  border-top: 1px solid #444 !important;
+  border-top: 1px solid #fff !important;
 }
 
 /* ----- Dark Theme: Table Fixes ----- */
@@ -59,19 +59,19 @@ hr {
 table {
   background: #000 !important;
   color: #fff !important;
-  border-color: #444 !important;
+  border-color: #fff !important;
 }
 
 thead th {
   background: #222 !important;
   color: #fff !important;
-  border-color: #444 !important;
+  border-color: #fff !important;
 }
 
 tbody td {
   background: #000 !important;
   color: #fff !important;
-  border-color: #444 !important;
+  border-color: #fff !important;
 }
 
 table a {
@@ -83,7 +83,7 @@ table a:hover {
 }
 
 th, td {
-  border-color: #444 !important;
+  border-color: #fff !important;
 }
 
 /* Make bold/strong text white in dark mode */
