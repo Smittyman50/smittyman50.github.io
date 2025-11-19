@@ -5,28 +5,16 @@ description: >
 
   <!-- Certification Logos -->
   <div class="cert-badges">
-    <span class="cert-badge aws">AWS Machine Learning - Specialty</span>
-    <span class="cert-badge aws">AWS Solutions Architect - Associate</span>
-    <span class="cert-badge aws">AWS Developer - Associate</span>
-    <span class="cert-badge aws">AWS SysOps Administrator - Associate</span>
-    <span class="cert-badge aws">AWS Cloud Practitioner - Foundation</span>
+    <span class="cert-badge aws-spec">AWS Machine Learning</span>
+    <span class="cert-badge aws-assoc">AWS Solutions Architect</span>
+    <span class="cert-badge aws-assoc">AWS Developer</span>
+    <span class="cert-badge aws-assoc">AWS SysOps Administrator</span>
+    <span class="cert-badge aws-found">AWS Cloud Practitioner</span>
     <span class="cert-badge sec">CISSP</span>
     <span class="cert-badge pm">PMP</span>
     <span class="cert-badge">ITIL v3 Foundation</span>
     <span class="cert-badge">Lean Six Sigma Green Belt</span>
   </div>
-
-#  <div style="display:flex; flex-wrap:wrap; gap:8px; max-width:260px;">
-#    <img src="/images/aws-certified-machine-learning-specialty.png" width="125"/>
-#    <img src="/images/aws-certified-solutions-architect-associate.png" width="125"/>
-#    <img src="/images/aws-certified-developer-associate.png" width="125"/>
-#    <img src="/images/aws-certified-sysops-administrator-associate.png" width="125"/>
-#    <img src="/images/aws-certified-cloud-practitioner.png" width="125"/>
-#    <img src="/images/certified-information-systems-security-professional-cissp.png" width="125"/>
-#    <img src="/images/project-management-professional-pmp.png" width="125"/>
-#    <img src="/images/the-open-group-certified-togaf-9-foundation.png" width="125"/>
-#  </div>
-
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme

@@ -121,7 +121,9 @@ pre, code {
   white-space: nowrap;
 }
 
-.cert-badge.aws  { border-color: #ff9900; }
+.cert-badge.aws-spec  { border-color: #6f6cf9; }
+.cert-badge.aws-assoc { border-color: #3587f8; }
+.cert-badge.aws-found { border-color: #ced5d5; }
 .cert-badge.sec  { border-color: #00e676; }
 .cert-badge.pm   { border-color: #42a5f5; }
 
