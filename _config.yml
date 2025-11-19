@@ -1,5 +1,13 @@
 title: "Michael Smith"
-description: "Portfolio showcasing 30+ years of experience in networking, cloud architecture, and AI/ML development."
+description: >
+  Portfolio showcasing 30+ years of experience in networking, cloud architecture, and AI/ML development.
+  <br><br>
+
+  <!-- Certification Logos -->
+  <img src="/images/certs/aws-certified-machine-learning-speciality.png" width="48" style="margin-right:8px;"/>
+  <img src="/images/certs/aws-certified-solution-architect-associate.png" width="48" style="margin-right:8px;"/>
+  <img src="/images/certs/aws-certified-developer-associate.png" width="48" style="margin-right:8px;"/>
+  <img src="/images/certs/aws-certified-sysops-administrator-associate.png" width="48" style="margin-right:8px;"/>
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme
