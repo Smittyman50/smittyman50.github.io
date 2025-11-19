@@ -26,10 +26,23 @@ a:hover {
   color: #80cfff !important;
 }
 
-/* Left sidebar (header) */
+/* ----- Dark Theme: Sidebar (left column) ----- */
+
 header {
   background: #000 !important;
   color: #fff !important;
+}
+
+header * {
+  color: #fff !important;
+}
+
+header a {
+  color: #4da6ff !important;
+}
+
+header a:hover {
+  color: #80cfff !important;
 }
 
 header h1, header p {
