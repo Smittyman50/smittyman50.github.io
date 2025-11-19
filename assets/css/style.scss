@@ -5,7 +5,7 @@ I'm hi---
 
 /* ----- Dark Theme Overrides for Minimal Theme ----- */
 
-body {
+/*body {
   background-color: #000 !important;    /* Pure black background */
   color: #fff !important;               /* White text */
   line-height: 1.6;
@@ -38,46 +38,6 @@ header h1, header p {
 /* Horizontal rules */
 hr {
   border-top: 1px solid #444 !important;
-}
-
-/* ----- Dark Theme: Table Fixes ----- */
-
-table {
-  background: #111 !important;
-  color: #fff !important;
-  border-color: #444 !important;
-}
-
-thead th {
-  background: #222 !important;
-  color: #fff !important;
-  border-color: #444 !important;
-}
-
-tbody td {
-  background: #111 !important;
-  color: #fff !important;
-  border-color: #444 !important;
-}
-
-tbody tr:nth-child(odd) td {
-  background: #151515 !important;   /* subtle row striping for readability */
-}
-
-tbody tr:nth-child(even) td {
-  background: #111 !important;
-}
-
-table a {
-  color: #4da6ff !important;        /* white text would hide links */
-}
-
-table a:hover {
-  color: #80cfff !important;
-}
-
-th, td {
-  border-color: #444 !important;
 }
 
 /* Code blocks */
