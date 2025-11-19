@@ -5,13 +5,15 @@ description: >
 
   <!-- Certification Logos -->
   <div class="cert-badges">
-    <span class="cert-badge">CISSP</span>
-    <span class="cert-badge">PMP</span>
-    <span class="cert-badge">AWS Certified</span>
-    <span class="cert-badge">ITIL v3</span>
-    <span class="cert-badge">Six Sigma GB</span>
-    <span class="cert-badge">MSCS (AI & ML)</span>
-    <span class="cert-badge">MBA</span>
+    <span class="cert-badge aws">AWS Machine Learning - Specialty</span>
+    <span class="cert-badge aws">AWS Solutions Architect - Associate</span>
+    <span class="cert-badge aws">AWS Developer - Associate</span>
+    <span class="cert-badge aws">AWS SysOps Administrator - Associate</span>
+    <span class="cert-badge aws">AWS Cloud Practitioner - Foundation</span>
+    <span class="cert-badge sec">CISSP</span>
+    <span class="cert-badge pm">PMP</span>
+    <span class="cert-badge">ITIL v3 Foundation</span>
+    <span class="cert-badge">Lean Six Sigma Green Belt</span>
   </div>
 
 #  <div style="display:flex; flex-wrap:wrap; gap:8px; max-width:260px;">
