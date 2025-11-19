@@ -5,10 +5,10 @@ description: >
 
   <!-- Certification Logos -->
   <div style="display:flex; flex-wrap:wrap; gap:8px; max-width:200px;">
-    <img src="/images/aws-certified-machine-learning-speciality.png" width="48"/>
-    <img src="/images/aws-certified-solution-architect-associate.png" width="48"/>
-    <img src="/images/aws-certified-developer-associate.png" width="48"/>
-    <img src="/images/aws-certified-sysops-administrator-associate.png" width="48"/>
+    <img src="/images/aws-certified-machine-learning-specialty.png" width="60"/>
+    <img src="/images/aws-certified-solutions-architect-associate.png" width="60"/>
+    <img src="/images/aws-certified-developer-associate.png" width="60"/>
+    <img src="/images/aws-certified-sysops-administrator-associate.png" width="60"/>
   </div>
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
