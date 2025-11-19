@@ -12,8 +12,8 @@ description: >
     <span class="cert-badge aws-found">AWS Cloud Practitioner</span>
     <span class="cert-badge sec">CISSP</span>
     <span class="cert-badge pm">PMP</span>
-    <span class="cert-badge">ITIL v3 Foundation</span>
-    <span class="cert-badge">Lean Six Sigma Green Belt</span>
+    <span class="cert-badge proc">ITIL v3 Foundation</span>
+    <span class="cert-badge proc">Lean Six Sigma Green Belt</span>
   </div>
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
