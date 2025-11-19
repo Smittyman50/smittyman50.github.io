@@ -77,6 +77,15 @@ tbody td {
   border-color: #fff !important;
 }
 
+/* Row striping */
+tbody tr:nth-child(odd) td {
+  background: #151515 !important;
+}
+
+tbody tr:nth-child(even) td {
+  background: #111 !important;
+}
+
 table a {
   color: #4da6ff !important;        /* white text would hide links */
 }
