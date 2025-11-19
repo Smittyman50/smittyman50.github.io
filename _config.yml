@@ -1,14 +1,18 @@
 title: "Michael Smith"
 description: >
   Portfolio showcasing 30+ years of experience in networking, cloud architecture, and AI/ML development.
-  <br><br>
+  <br>
 
   <!-- Certification Logos -->
   <div style="display:flex; flex-wrap:wrap; gap:8px; max-width:260px;">
-    <img src="/images/aws-certified-machine-learning-specialty.png" width="120"/>
-    <img src="/images/aws-certified-solutions-architect-associate.png" width="120"/>
-    <img src="/images/aws-certified-developer-associate.png" width="120"/>
-    <img src="/images/aws-certified-sysops-administrator-associate.png" width="120"/>
+    <img src="/images/aws-certified-machine-learning-specialty.png" width="125"/>
+    <img src="/images/aws-certified-solutions-architect-associate.png" width="125"/>
+    <img src="/images/aws-certified-developer-associate.png" width="125"/>
+    <img src="/images/aws-certified-sysops-administrator-associate.png" width="125"/>
+    <img src="/images/aws-certified-cloud-practitioner.png" width="125"/>
+    <img src="/images/certified-information-systems-security-professional-cissp.png" width="125"/>
+    <img src="/images/project-management-professional-pmp.png" width="125"/>
+    <img src="/images/the-open-group-certified-togaf-9-foundation.png" width="125"/>
   </div>
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
