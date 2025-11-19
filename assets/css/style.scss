@@ -86,6 +86,12 @@ th, td {
   border-color: #444 !important;
 }
 
+/* Make bold/strong text white in dark mode */
+strong,
+b {
+  color: #fff !important;
+}
+
 /* Code blocks */
 pre, code {
   background: #111 !important;
