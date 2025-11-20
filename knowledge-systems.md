@@ -2,7 +2,7 @@
 
 # Knowledge Systems & Second Brain
 
-This page highlights how I use Obsidian, PARA+, Zettelkasten principles, and AI-augmented workflows to build a structured, resilient knowledge system. My setup integrates local LLMs running in my homelab, automated note pipelines, and a tightly linked network of evergreen notes that support learning, research, and professional design work.
+This page highlights how I use Obsidian, PARA + Zettelkasten principles, and AI-augmented workflows to build a structured, resilient knowledge system. My setup integrates local LLMs running in my homelab, automated note pipelines, and a tightly linked network of evergreen notes that support learning, research, and design work.
 
 ---
 
@@ -36,7 +36,6 @@ Each project folder includes:
 - Objectives and milestones  
 - Technical design notes  
 - Related diagrams  
-- Meeting logs  
 - AI-assisted summaries  
 
 ---
@@ -46,7 +45,7 @@ Long-term responsibilities that require ongoing attention.
 Examples:
 - Cloud Architecture  
 - Network Automation  
-- Homelab Operations (SmittyNet)  
+- Homelab Operations 
 - Academic Research  
 - Writing & Thought Leadership  
 
@@ -92,7 +91,7 @@ I maintain the classic Zettelkasten note taxonomy:
 Raw thoughts captured during reading, troubleshooting, or ideation.
 
 ### **Literature Notes**
-Summaries of books, articles, academic papers, documentation, or research for my MSCS and AI/ML work.
+Summaries of books, articles, academic papers, documentation, or research.
 
 ### **Permanent Notes (Evergreen Notes)**
 Atomic, concept-based notes written in my own words and linked bidirectionally.
@@ -166,7 +165,6 @@ via:
 Automation reduces manual overhead and keeps information flowing consistently.
 
 ### **Examples of automated workflows**
-- Convert meeting transcripts into structured notes  
 - Summarize long documents into Literature Notes  
 - Extract atomic Zettels from articles or PDFs  
 - Generate project documentation from rough notes  
@@ -180,31 +178,22 @@ These pipelines keep the vault accurate, complete, and interconnected.
 
 ## Practical Examples of PARA + Zettelkasten in Action
 
-### **1. Academic Research (MSCS AI & ML)**
+### **1. Academic Research**
 Used for:
-- D804 capstone planning  
 - Literature management  
 - Model design documentation  
 - Experiments and evaluations  
 - Tracking CNN & NB model iterations  
 
-### **2. Professional Architecture Work**
-Used to capture:
-- High-level design (HLD) documents  
-- Cloud architecture notes  
-- Network segmentation and automation patterns  
-- Troubleshooting and RCA logs  
-- Advisory consulting frameworks  
-
-### **3. Homelab Projects**
+### **2. Homelab Projects**
 Organizes:
 - Proxmox cluster notes  
 - TrueNAS SCALE design  
 - Mikrotik VRRP + CAPsMAN configuration  
-- Incus container orchestration  
+- Incus & LXC container orchestration  
 - Terraform & Ansible workflows  
 
-### **4. Maker & Automation Projects**
+### **3. Maker & Automation Projects**
 Captures:
 - Raspberry Pi greenhouse design logic  
 - Ham radio APRS diagrams  
@@ -223,7 +212,7 @@ Captures:
 - **Local LLMs via Ollama**  
 - **OpenWebUI**  
 - **Proxmox VE & TrueNAS SCALE**  
-- **Incus containers**  
+- **Incus & LXC containers**  
 - **Python utilities for automated note processing**
 
 ---
