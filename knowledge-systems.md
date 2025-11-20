@@ -38,8 +38,6 @@ Each project folder includes:
 - Related diagrams  
 - AI-assisted summaries  
 
----
-
 ### **A — Areas**  
 Long-term responsibilities that require ongoing attention.  
 Examples:
@@ -54,8 +52,6 @@ Areas contain:
 - Standards, procedures, and reference checklists  
 - Conceptual overviews that evolve over time  
 
----
-
 ### **R — Resources**  
 Reference material with intrinsic value but no active project.  
 Examples:
@@ -67,8 +63,6 @@ Examples:
 - Homelab hardware documentation  
 
 These notes often become **sources** for Zettelkasten permanent notes.
-
----
 
 ### **A — Archives**  
 Inactive or completed items.  
@@ -82,7 +76,7 @@ This keeps the active vault lightweight and fast.
 
 ---
 
-## Zettelkasten Note-making Philosophy
+## Zettelkasten Note-taking Philosophy
 
 While PARA determines *where* things go, Zettelkasten determines *how ideas connect*.  
 I maintain the classic Zettelkasten note taxonomy:
