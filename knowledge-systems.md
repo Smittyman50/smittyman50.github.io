@@ -1,160 +1,245 @@
 [← Back to Home](./index.md)
 
-## Knowledge Systems & Second Brain
+# Knowledge Systems & Second Brain
 
-This page highlights how I use Obsidian, Zettelkasten, and AI-augmented workflows to build a structured personal knowledge system. My setup integrates local LLMs running in my homelab, automated note generation pipelines, and deeply cross-linked evergreen notes that support research, writing, and continuous learning.
+This page highlights how I use Obsidian, PARA+, Zettelkasten principles, and AI-augmented workflows to build a structured, resilient knowledge system. My setup integrates local LLMs running in my homelab, automated note pipelines, and a tightly linked network of evergreen notes that support learning, research, and professional design work.
 
 ---
 
-### Architectural Overview
+## Architectural Overview
 
-My knowledge system combines Obsidian’s flexibility with a disciplined note architecture and locally hosted AI models. The system focuses on creating durable, interconnected knowledge that supports both long-term retention and rapid retrieval.
+My knowledge system combines Obsidian’s flexibility with PARA for structure, Zettelkasten for idea development, and locally run AI models for synthesis and retrieval. This creates an environment where information flows smoothly from capture to long-term understanding.
 
 <div align="center">
   <img src="./assets/images/knowledge/second-brain-architecture.png" width="750" alt="Second Brain Architecture Diagram"/>
 </div>
 
-*Figure: High-level flow of how notes move through my system and how local LLMs augment the process.*
+*Figure: High-level architecture showing how PARA, Zettelkasten, and AI tools interact.*
 
 ---
 
-### Vault Structure & Note Architecture
+## PARA Organizational Structure
 
-Obsidian serves as the primary interface for capturing, organizing, and synthesizing knowledge. My vault is structured around clear, purpose-driven note types:
+PARA provides the **spatial organization** of my vault: where information lives and how it moves.
 
-#### **Note Types**
-- **Fleeting Notes** – Quick ideas and observations captured during reading, meetings, or hands-on work.
-- **Literature Notes** – Structured notes summarizing academic papers, books, articles, and documentation.
-- **Permanent Notes** – Evergreen Zettels that represent atomic concepts, directly linked to related ideas.
-- **Project Notes** – Documentation, diagrams, and work logs tied to specific implementations.
-- **Daily Notes** – Journals, daily logs, and auto-generated summaries.
+### **P — Projects**  
+Short-term efforts with a clear outcome or deliverable.  
+Examples in my vault:
+- AI/ML Model Development  
+- Proxmox Cluster Upgrades  
+- MikroTik VRRP & CAPsMAN Design  
+- AWS DevOps Engineer Professional Prep  
+- Raspberry Pi Greenhouse Automation  
 
-#### **Cross-Linking**
-Knowledge is built through deliberate, bi-directional linking:
-
-```
-[[machine-learning-overfitting]]
-[[aws-proxmox-network-architecture]]
-[[emotion-recognition-cnn-notes]]
-[[obsidian-ai-workflow]]
-```
-
-This creates a resilient network of ideas rather than a static folder tree.
+Each project folder includes:
+- Project brief  
+- Objectives and milestones  
+- Technical design notes  
+- Related diagrams  
+- Meeting logs  
+- AI-assisted summaries  
 
 ---
 
-### AI-Augmented Workflows
+### **A — Areas**  
+Long-term responsibilities that require ongoing attention.  
+Examples:
+- Cloud Architecture  
+- Network Automation  
+- Homelab Operations (SmittyNet)  
+- Academic Research  
+- Writing & Thought Leadership  
 
-Local AI tools enhance the capture and synthesis of information without relying on cloud-based inference.
+Areas contain:
+- Evergreen notes  
+- Standards, procedures, and reference checklists  
+- Conceptual overviews that evolve over time  
 
-#### **Text Generator Plugin**
-- Converts rough ideas into structured notes  
-- Summarizes long passages or transcripts  
-- Extracts key points and action items  
-- Generates outlines and expanding bullet points  
+---
 
-#### **Companion Plugin**
-- Provides inline AI completion  
-- Suggests next steps, definitions, or clarifications  
-- Works on-demand as I write
+### **R — Resources**  
+Reference material with intrinsic value but no active project.  
+Examples:
+- Machine Learning theory  
+- Python patterns  
+- Zettelkasten techniques  
+- Terraform & Ansible design patterns  
+- Networking protocols  
+- Homelab hardware documentation  
 
-#### **Msty.AI Integration**
-Msty acts as an intelligent retrieval engine over selected “knowledge stacks” inside Obsidian:
+These notes often become **sources** for Zettelkasten permanent notes.
 
-- Uses embeddings to understand context  
-- Searches across curated note collections  
-- Returns relevant notes, insights, and references  
-- Integrates with local LLMs through API  
+---
 
-#### **Local LLM Integration**
-I run multiple models in my homelab and access them through OpenWebUI:
+### **A — Archives**  
+Inactive or completed items.  
+Examples:
+- Retired architecture diagrams  
+- Completed certifications  
+- Finished academic course notes  
+- Deprecated tooling  
 
-- **Ollama** for endpoint-based inference  
-- **DeepSeek-R1**, **LLaMA**, and code-focused models  
-- Fast, private, offline access  
-- Consistent performance and predictable latency  
+This keeps the active vault lightweight and fast.
+
+---
+
+## Zettelkasten Note-making Philosophy
+
+While PARA determines *where* things go, Zettelkasten determines *how ideas connect*.  
+I maintain the classic Zettelkasten note taxonomy:
+
+### **Fleeting Notes**
+Raw thoughts captured during reading, troubleshooting, or ideation.
+
+### **Literature Notes**
+Summaries of books, articles, academic papers, documentation, or research for my MSCS and AI/ML work.
+
+### **Permanent Notes (Evergreen Notes)**
+Atomic, concept-based notes written in my own words and linked bidirectionally.
+
+These notes include:
+- Concept explanations  
+- Architecture ideas  
+- AI model design insights  
+- Lessons from experiments  
+- Domain knowledge (networking, cloud, homelab work)
+
+Example link relationships:
+
+```
+[[deep-learning-regularization]]
+[[terraform-immutable-infrastructure]]
+[[vrrp-failover-design]]
+[[local-llm-inference-patterns]]
+```
+
+Zettelkasten creates a **dense web of ideas**, while PARA keeps everything **navigable and organized**.
+
+---
+
+## AI-Augmented Knowledge Workflows
+
+AI plays a central role in accelerating synthesis and retrieval.
+
+### **Text Generator Plugin**
+- Summaries  
+- Note restructuring  
+- Extracting atomic notes  
+- Turning rough text into formal notes  
+- Drafting outlines for research or articles  
+
+### **Companion Plugin**
+- Inline autocomplete  
+- Context-aware suggestions  
+- Real-time ideation while writing  
+
+### **Msty.AI Contextual Retrieval**
+- Embedding-based semantic search  
+- Knowledge stack querying  
+- Automatic resurfacing of related notes  
+- Local inference through OpenWebUI/Ollama  
+
+### **Local LLM Integration (Homelab)**
+Running models such as:
+
+- DeepSeek-R1  
+- LLaMA variants  
+- Code-oriented models  
+- Lightweight reasoning models  
+
+via:
+
+- Proxmox VMs & LXCs  
+- OpenWebUI  
+- Ollama API endpoints  
 
 <div align="center">
   <img src="./assets/images/knowledge/local-llm-architecture.png" width="750" alt="Local LLM Architecture Diagram"/>
 </div>
 
-*Figure: How Obsidian, Msty, and local LLMs integrate to support retrieval and synthesis.*
+*Figure: Integration between Obsidian, Msty, Companion, and local LLMs running in SmittyNet.*
 
 ---
 
-### Automated Note Pipelines
+## Automated Note Pipelines
 
-A core principle in my system is reducing manual overhead and letting automation handle repetitive work.
+Automation reduces manual overhead and keeps information flowing consistently.
 
-#### **Automations include:**
-- Summarizing meeting transcripts into literature notes  
-- Extracting atomic notes from long-form content  
-- Converting daily journals into actionable summaries  
-- Auto-tagging and categorizing new notes  
-- Generating cross-links based on semantic similarity  
-- Transforming project documentation into evergreen entries  
+### **Examples of automated workflows**
+- Convert meeting transcripts into structured notes  
+- Summarize long documents into Literature Notes  
+- Extract atomic Zettels from articles or PDFs  
+- Generate project documentation from rough notes  
+- Create daily journal summaries with key insights  
+- Auto-generate backlinks based on semantic similarity  
+- Maintain project → area → resource link consistency  
+
+These pipelines keep the vault accurate, complete, and interconnected.
 
 ---
 
-### Example Use Cases
+## Practical Examples of PARA + Zettelkasten in Action
 
-#### **1. Academic Research**
-During my MSCS (AI & ML) program, I used this system to manage:
-- Academic papers  
-- D804 capstone notes  
+### **1. Academic Research (MSCS AI & ML)**
+Used for:
+- D804 capstone planning  
+- Literature management  
 - Model design documentation  
-- Experiment logs and findings  
-- Classification and evaluation artifacts  
-- Literature summaries that fed directly into academic writing  
+- Experiments and evaluations  
+- Tracking CNN & NB model iterations  
 
-#### **2. Professional Architecture Work**
-I use the system to track:
-- Cloud architecture patterns  
-- CX integration design notes  
-- Network automation approaches  
-- Troubleshooting logs and RCA documentation  
+### **2. Professional Architecture Work**
+Used to capture:
+- High-level design (HLD) documents  
+- Cloud architecture notes  
+- Network segmentation and automation patterns  
+- Troubleshooting and RCA logs  
+- Advisory consulting frameworks  
 
-#### **3. Homelab Documentation**
-My Obsidian vault stores:
-- Proxmox cluster configuration notes  
-- MikroTik routing diagrams  
-- VRRP and High Availability strategy notes  
-- TrueNAS ZFS pool design rationale  
-- Automation workflows for Ansible and Terraform  
+### **3. Homelab Projects**
+Organizes:
+- Proxmox cluster notes  
+- TrueNAS SCALE design  
+- Mikrotik VRRP + CAPsMAN configuration  
+- Incus container orchestration  
+- Terraform & Ansible workflows  
 
-#### **4. Personal Projects**
-This includes:
-- Raspberry Pi greenhouse automation logic  
-- Ham radio (APRS, Direwolf, APRX) configurations  
-- LLM experiments hosted in SmittyNet  
+### **4. Maker & Automation Projects**
+Captures:
+- Raspberry Pi greenhouse design logic  
+- Ham radio APRS diagrams  
+- AI-driven greenhouse controls  
+- GPIO mapping and automation flows  
 
 ---
 
-### Tools & Platforms
+## Tools & Platforms Supporting the System
 
-- **Obsidian** (primary interface)  
-- **Zettelkasten note architecture**  
+- **Obsidian**  
+- **Zettelkasten method**  
+- **PARA organizational structure**  
 - **Text Generator & Companion plugins**  
-- **Msty.AI** for contextual retrieval  
-- **Local LLMs** via Ollama  
-- **OpenWebUI API**  
-- **Proxmox cluster** powering AI models  
-- **TrueNAS SCALE** backing storage for the vault  
-- **Incus containers** for lightweight AI utilities  
+- **Msty.AI retrieval engine**  
+- **Local LLMs via Ollama**  
+- **OpenWebUI**  
+- **Proxmox VE & TrueNAS SCALE**  
+- **Incus containers**  
+- **Python utilities for automated note processing**
 
 ---
 
-### Why This Matters
+## Why This System Works
 
-This knowledge system is more than a note-taking workflow — it’s an active part of how I learn, build, and design. It accelerates my ability to:
+This knowledge system is a force multiplier that enables me to:
 
-- Connect new ideas with existing knowledge  
-- Generate new concepts rapidly  
-- Maintain high-quality technical documentation  
-- Support academic writing and thought leadership  
-- Build complex systems with clear reasoning and recall  
+- Connect new ideas to existing knowledge  
+- Perform fast retrieval over large information volumes  
+- Support academic writing with structured research  
+- Maintain evergreen documentation across projects  
+- Build complex systems with clear traceability  
+- Amplify critical thinking through AI assistance  
 
-It’s a force multiplier across everything I do — from AI model development and network automation to homelab experimentation and professional consulting.
+It integrates my technical background, homelab capabilities, academic work, and professional consulting experience into a unified, scalable knowledge ecosystem.
 
 ---
 
