@@ -12,6 +12,8 @@ This site is organized into a few focus areas:
   Applied AI/ML projects, including emotion recognition, text classification, and practical ML tooling.
 - **[Network & Infrastructure Automation](./network-automation.md)**  
   Cisco and MikroTik configuration, Proxmox and TrueNAS automation, Terraform/Ansible workflows, and cloud networking patterns.
+- **[Knowledge Systems & Second Brain](./knowledge-systems.md)**  
+  Obsidian, PARA, Zettelkasten, AI-augmented note-taking, and experimentation with LLM-powered workflows.
 
 ---
 
