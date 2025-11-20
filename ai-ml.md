@@ -8,3 +8,7 @@ This section highlights my hands-on work in applied machine learning and model d
 |---------|----------|------------|------|
 | **Emotion Recognition (CNN)** | Convolutional neural network trained on labeled facial expressions with reproducible pipeline + artifact management. | TensorFlow, Keras, NumPy, scikit-learn | [GitHub](https://github.com/Smittyman50/Emotion-Recognition-CNN) |
 | **Text Emotion Classifier** | Classical ML with TF-IDF + MNB, model promotion using macro-F1 leaderboard. | Python, scikit-learn | [GitHub](https://github.com/Smittyman50/Text-Emotion-NB) |
+
+---
+
+[← Back to Home](./index.md)
