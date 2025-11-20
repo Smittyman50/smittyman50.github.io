@@ -222,7 +222,7 @@ This knowledge system is a force multiplier that enables me to:
 - Build complex systems with clear traceability  
 - Amplify critical thinking through AI assistance  
 
-It integrates my technical background, homelab capabilities, academic work, and personal research and experimentation into a unified, scalable knowledge ecosystem.
+It integrates my technical background, homelab capabilities, academic work, and personal research/experimentation into a unified, scalable knowledge ecosystem.
 
 ---
 
