@@ -101,6 +101,13 @@ pre, code {
   color: #0f0 !important;               /* Optional: green code text (readable on black) */
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
 /* Certification micro badges in left sidebar */
 .cert-badges {
   display: flex;
