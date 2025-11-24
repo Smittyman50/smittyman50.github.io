@@ -19,6 +19,7 @@ This site is organized into a few focus areas:
 
 ## 📰 Articles & Thought Leadership
 
+- [Learning From the Past: What the 2002 WorldCom Layoffs Can Teach Us About Resilience in Today’s Verizon Restructuring](https://www.linkedin.com/pulse/learning-from-past-what-2002-worldcom-layoffs-can-teach-mike-smith-zxhvc)
 - [Rolling for Insight: What Role-Playing Games Teach Us About Leadership, Teamwork, and Creativity](https://www.linkedin.com/pulse/rolling-insight-what-role-playing-games-teach-us-leadership-smith-0skic)
 - [Why I’ve Been Quiet Lately: The Power of Lifelong Learning](https://www.linkedin.com/pulse/why-ive-been-quiet-lately-power-lifelong-learning-mike-smith-h4hcc)
 - [Leadership That Delivers: Why Servant Leadership and Outcomes Still Matter](https://www.linkedin.com/pulse/leadership-delivers-why-servant-outcomes-still-matter-mike-smith-lyiec)
