@@ -146,7 +146,7 @@ via:
 
 <img src="./images/knowledge/local-llm-architecture.png" alt="Local LLM Architecture Diagram" class="center"/>
 
-*Figure: Integration between Obsidian, Msty, Companion, and local LLMs running in SmittyNet.*
+*Figure: Integration between Obsidian, Msty, Companion, and local LLMs running in my home network.*
 
 ---
 
