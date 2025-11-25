@@ -220,6 +220,4 @@ This knowledge system is a force multiplier that enables me to:
 
 It integrates my technical background, homelab capabilities, academic work, and personal research/experimentation into a unified, scalable knowledge ecosystem.
 
----
-
 [← Back to Home](./index.md)
