@@ -142,11 +142,9 @@ via:
 
 - Proxmox VMs & LXCs  
 - OpenWebUI  
-- Ollama API endpoints  
+- Ollama API endpoints
 
-<div align="center">
-  <img src="./images/knowledge/local-llm-architecture.png" width="750" alt="Local LLM Architecture Diagram"/>
-</div>
+<img src="./images/knowledge/local-llm-architecture.png" alt="Local LLM Architecture Diagram" class="center"/>
 
 *Figure: Integration between Obsidian, Msty, Companion, and local LLMs running in SmittyNet.*
 
