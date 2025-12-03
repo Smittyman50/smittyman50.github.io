@@ -22,9 +22,9 @@ SmittyNet provides the core network services for the house and the lab. It inclu
   - L2 Connectivity (Edge ports and inter-switch trunking)
   - L3 Routing (Local & WAN)
   - Firewalling
-  - CAPsMAN for centralized AP control  
-- Trunked VLANs to Proxmox nodes and TrueNAS  
-- Segmentation for management, servers, IoT, media, and user devices  
+  - CAPsMAN for centralized AP control
+- Trunked VLANs to Proxmox nodes and TrueNAS
+- Segmentation for management, servers, IoT, media, and user devices
 
 ## 1.2 VLAN Layout
 
@@ -41,7 +41,7 @@ This structure keeps traffic organized and provides clear separation between tru
 
 ## 1.3 Wireless (CAPsMAN)
 
-CAPsMAN manages SSIDs, security settings, channel assignments, and power levels for all access points. VRRP is used only for the controller IP to keep AP management available during maintenance.
+CAPsMAN manages SSIDs, security settings, channel assignments, and power levels for all access points. VRRP is configured for the controller IP to keep AP management available during maintenance on my MikroTik CRS switches.
 
 ---
 
