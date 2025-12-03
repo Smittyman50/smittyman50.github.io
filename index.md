@@ -11,7 +11,7 @@ This site is organized into a few focus areas:
 - **[AI & Machine Learning](./ai-ml.md)**  
   Applied AI/ML projects, including emotion recognition, text classification, and practical ML tooling.
 - **[Network & Infrastructure Automation](./network-automation.md)**  
-  A collection of network architectures and automation projects from both enterprise work and my home lab. This includes data center and hybrid cloud designs, routing and segmentation models, and Terraform, Ansible, and Python repositories that demonstrate how these patterns are implemented in real environments.
+  Network designs and automation projects from enterprise and lab environments, with examples using Terraform, Ansible, and Python.
 - **[Knowledge Systems & Second Brain](./knowledge-systems.md)**  
   Obsidian, PARA, Zettelkasten, AI-augmented note-taking, and experimentation with LLM-powered workflows.
 - **[Home Network & Home Lab](./home-network.md)**  
