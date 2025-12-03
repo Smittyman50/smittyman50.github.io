@@ -11,9 +11,11 @@ This site is organized into a few focus areas:
 - **[AI & Machine Learning](./ai-ml.md)**  
   Applied AI/ML projects, including emotion recognition, text classification, and practical ML tooling.
 - **[Network & Infrastructure Automation](./network-automation.md)**  
-  Cisco and MikroTik configuration, Proxmox and TrueNAS automation, Terraform/Ansible workflows, and cloud networking patterns.
+  A collection of network architectures and automation projects from both enterprise work and my home lab. This includes data center and hybrid cloud designs, routing and segmentation models, and Terraform, Ansible, and Python repositories that demonstrate how these patterns are implemented in real environments.
 - **[Knowledge Systems & Second Brain](./knowledge-systems.md)**  
   Obsidian, PARA, Zettelkasten, AI-augmented note-taking, and experimentation with LLM-powered workflows.
+- **[Home Network & Home Lab](./home-network.md)**  
+  The architecture of my home network and lab environment, including switching, routing, VLAN design, Proxmox virtualization, TrueNAS storage, Raspberry Pi systems, and the services that tie it all together.
 
 ---
 
