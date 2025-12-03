@@ -104,8 +104,7 @@ Automation in the lab uses:
 - **Ansible** for configuring hosts and services  
 - **Python** for utility tooling and workflow automation  
 
-More detailed examples are available on the  
-**[Network Design & Automation](./network-automation.md)** page.
+More detailed examples are available on the **[Network Design & Automation](./network-automation.md)** page.
 
 ---
 
