@@ -30,7 +30,7 @@ SmittyNet provides the core network services for the house and the lab. It inclu
 
 | VLAN | Purpose |
 |------|---------|
-| 10 | Network Management (Switches, Routers, APs, etc.) |
+| 10 | Network Management (Switches, Routers, APs, etc.); Native VLAN for trunking |
 | 20 | Client Devices (Desktops, Laptops, SmartPhones, etc.) |
 | 21 | Servers (Proxmox Hosts, Linux Servers, TrueNAS Server, etc.) |
 | 22 | IoT Devices (Home Appliances, Smart Thermostat, Cameras, etc.) |
