@@ -8,8 +8,7 @@ This page outlines the design of my home network (SmittyNet) and the home lab th
 
 # Architecture Diagram
 
-*(Insert diagram)*  
-`/assets/images/network/home-network-lab-overview.png`
+<img src="./images/network/home-network-lab-overview.png" alt="Home Network & Lab Architecture Diagram" class="center"/>
 
 ---
 
