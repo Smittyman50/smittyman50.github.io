@@ -139,12 +139,27 @@ header .cert-badges {
   margin-bottom: 20px; /* extra space so the attribution doesn't collide */
 }
 
+.panzoom-wrapper {
+  margin: 1.5rem 0;
+}
+
+.panzoom-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.panzoom-controls button {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
 .panzoom-container {
   position: relative;
   max-width: 100%;
-  height: min(75vh, 800px);  // fits nicely in the viewport
+  height: min(75vh, 800px);
   overflow: hidden;
-  margin: 1.5rem 0;
   border: 1px solid #444;
 }
 

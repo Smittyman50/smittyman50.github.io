@@ -64,12 +64,13 @@
       });
     </script>
     <!-- Panzoom Library -->
-    <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.6.1/dist/panzoom.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        document.querySelectorAll('.panzoom-container').forEach(container => {
-          const img = container.querySelector('img.panzoom-img');
-          if (!img) return;
+        document.querySelectorAll('.panzoom-wrapper').forEach(wrapper => {
+          const container = wrapper.querySelector('.panzoom-container');
+          const img = container && container.querySelector('img.panzoom-img');
+          if (!container || !img) return;
 
           const panzoom = Panzoom(img, {
             maxScale: 8,
@@ -77,21 +78,30 @@
             contain: 'inside'
           });
 
-          // Custom wheel handler for zooming
-          container.addEventListener('wheel', function (event) {
-            event.preventDefault();
+          const zoomInBtn  = wrapper.querySelector('.pz-zoom-in');
+          const zoomOutBtn = wrapper.querySelector('.pz-zoom-out');
+          const resetBtn   = wrapper.querySelector('.pz-reset');
 
-            // deltaY < 0 → zoom in, deltaY > 0 → zoom out
-            const zoomFactor = event.deltaY < 0 ? 1.15 : 0.85;
-
-            panzoom.zoom(zoomFactor, {
-              animate: false,
-              focal: {
-                x: event.clientX,
-                y: event.clientY
-              }
+          if (zoomInBtn) {
+            zoomInBtn.addEventListener('click', function () {
+              panzoom.zoomIn();
             });
-          }, { passive: false });
+          }
+
+          if (zoomOutBtn) {
+            zoomOutBtn.addEventListener('click', function () {
+              panzoom.zoomOut();
+            });
+          }
+
+          if (resetBtn) {
+            resetBtn.addEventListener('click', function () {
+              panzoom.reset();
+            });
+          }
+
+          // Optional: if wheel ever works, you can keep this.
+          // container.parentElement.addEventListener('wheel', panzoom.zoomWithWheel, { passive: false });
         });
       });
     </script>
