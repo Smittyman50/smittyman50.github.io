@@ -71,16 +71,15 @@
           const img = container.querySelector('img.panzoom-img');
           if (!img) return;
 
+          // Create Panzoom on the image
           const panzoom = Panzoom(img, {
             maxScale: 8,
             minScale: 1,
-            contain: 'inside'   // ensure it starts fully visible
+            contain: 'inside'
           });
 
-          container.addEventListener('wheel', function (event) {
-            event.preventDefault();   // stop page scroll while zooming
-            panzoom.zoomWithWheel(event);
-          });
+          // Attach wheel zoom directly, with passive: false (per Panzoom docs)
+          container.addEventListener('wheel', panzoom.zoomWithWheel, { passive: false });
         });
       });
     </script>
