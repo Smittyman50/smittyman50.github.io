@@ -52,7 +52,6 @@
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-
     <!-- mediumZoom Library -->
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
     <script>
@@ -64,24 +63,26 @@
         });
       });
     </script>
-
     <!-- Panzoom Library -->
     <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        
-        /* Enable Panzoom only on elements with class .panzoom-container */
         document.querySelectorAll('.panzoom-container').forEach(container => {
-          const panzoom = Panzoom(container, {
+          const img = container.querySelector('img.panzoom-img');
+          if (!img) return;
+
+          const panzoom = Panzoom(img, {
             maxScale: 8,
             minScale: 1,
-            zoomSpeed: 0.08,
-            contain: 'outside'
+            contain: 'inside'   // ensure it starts fully visible
           });
-          container.addEventListener('wheel', panzoom.zoomWithWheel);
+
+          container.addEventListener('wheel', function (event) {
+            event.preventDefault();   // stop page scroll while zooming
+            panzoom.zoomWithWheel(event);
+          });
         });
       });
     </script>
-
   </body>
 </html>
