@@ -157,15 +157,15 @@ header .cert-badges {
 
 .panzoom-container {
   position: relative;
-  max-width: 100%;
-  height: min(75vh, 800px);
+  width: 100%;
+  max-height: 75vh;   // diagram viewport, can tweak
   overflow: hidden;
   border: 1px solid #444;
 }
 
 .panzoom-img {
   display: block;
-  max-width: 100%;
+  width: 100%;        // initial fit to container width
   height: auto;
 }
 

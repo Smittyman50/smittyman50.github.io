@@ -74,8 +74,8 @@
 
           const panzoom = Panzoom(img, {
             maxScale: 8,
-            minScale: 1,
-            contain: 'inside'
+            minScale: 1
+            // NOTE: no 'contain' option here
           });
 
           const zoomInBtn  = wrapper.querySelector('.pz-zoom-in');
@@ -100,8 +100,15 @@
             });
           }
 
-          // Optional: if wheel ever works, you can keep this.
-          // container.parentElement.addEventListener('wheel', panzoom.zoomWithWheel, { passive: false });
+          // Optional: wheel zoom, now that nothing is clamping scale
+          container.addEventListener('wheel', function (event) {
+            event.preventDefault();
+            const zoomFactor = event.deltaY < 0 ? 1.15 : 0.85;
+            panzoom.zoom(zoomFactor, {
+              animate: false,
+              focal: { x: event.clientX, y: event.clientY }
+            });
+          }, { passive: false });
         });
       });
     </script>
