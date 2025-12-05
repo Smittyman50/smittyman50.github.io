@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 [← Back to Home](./index.md)
 
 # Home Network & Home Lab Architecture
