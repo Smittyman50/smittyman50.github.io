@@ -71,15 +71,27 @@
           const img = container.querySelector('img.panzoom-img');
           if (!img) return;
 
-          // Create Panzoom on the image
           const panzoom = Panzoom(img, {
             maxScale: 8,
             minScale: 1,
             contain: 'inside'
           });
 
-          // Attach wheel zoom directly, with passive: false (per Panzoom docs)
-          container.addEventListener('wheel', panzoom.zoomWithWheel, { passive: false });
+          // Custom wheel handler for zooming
+          container.addEventListener('wheel', function (event) {
+            event.preventDefault();
+
+            // deltaY < 0 → zoom in, deltaY > 0 → zoom out
+            const zoomFactor = event.deltaY < 0 ? 1.15 : 0.85;
+
+            panzoom.zoom(zoomFactor, {
+              animate: false,
+              focal: {
+                x: event.clientX,
+                y: event.clientY
+              }
+            });
+          }, { passive: false });
         });
       });
     </script>
