@@ -20,8 +20,9 @@ This site is organized into a few focus areas:
   Obsidian, PARA, Zettelkasten, AI-augmented note-taking, and experimentation with LLM-powered workflows.
 - **[Home Network & Home Lab](./home-network.md)**  
   The design of my home network and lab, including switching, VLANs, Proxmox, TrueNAS, and Raspberry Pi systems.
-- **[Amateur Radio](./amateur-radio.md)**  
-  My amateur radio setup, including radios, antennas, APRS/Direwolf configuration, digital modes, and supporting scripts for packet and signal processing.
+- **[Amateur Radio](./amateur-radio.md)**
+  My radio setup, APRS/Direwolf configuration, digital modes, and supporting scripts for packet and signal work.
+
 
 ---
 
