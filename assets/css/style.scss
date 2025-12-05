@@ -139,6 +139,19 @@ header .cert-badges {
   margin-bottom: 20px; /* extra space so the attribution doesn't collide */
 }
 
+.panzoom-container {
+  width: 100%;
+  height: 750px;      // adjust as needed
+  overflow: hidden;
+  border: 1px solid #444;
+}
+
+.panzoom-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Desktop / large screens: fluid layout that scales with window size */
 @media screen and (min-width: 961px) {
   .wrapper {
