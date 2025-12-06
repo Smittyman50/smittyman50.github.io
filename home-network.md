@@ -14,7 +14,7 @@ This page outlines the design of my home network (SmittyNet) and the home lab th
 
 ![Home Network & Lab Architecture Diagram](./images/network/home-network-lab-overview.png)
 
-[Open interactive, zoomable viewer](./home-network-viewer.html)
+[Open interactive, zoomable viewer](./home-network-viewer.md)
 
 ---
 

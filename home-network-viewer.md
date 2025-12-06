@@ -3,8 +3,12 @@ layout: default
 title: Home Network Diagram (Interactive Viewer)
 ---
 
-<h1>Home Network &amp; Lab Architecture Diagram (Interactive Viewer)</h1>
-<p>Use the controls below to zoom and pan around the diagram. Scroll the mouse wheel over the diagram to zoom, and drag to pan.</p>
+[← Back to Home Network](./home-network.md)
+
+# Home Network & Lab Architecture Diagram (Interactive Viewer)
+
+Use the controls below to zoom and pan around the diagram.  
+Scroll the mouse wheel over the diagram to zoom, and drag to pan.
 
 <div class="diagram-viewer">
   <div class="diagram-controls">
@@ -18,13 +22,14 @@ title: Home Network Diagram (Interactive Viewer)
       id="diagram-image"
       class="diagram-viewer-img"
       src="./images/network/home-network-lab-overview.png"
-      alt="Home Network &amp; Lab Architecture Diagram"
+      alt="Home Network & Lab Architecture Diagram"
     />
   </div>
 </div>
 
 <!-- Panzoom library -->
 <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.6.1/dist/panzoom.min.js"></script>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const container = document.getElementById('diagram-container');
@@ -34,30 +39,23 @@ title: Home Network Diagram (Interactive Viewer)
     const zoomOutBtn = document.getElementById('diag-zoom-out');
     const resetBtn   = document.getElementById('diag-reset');
 
-    // Initialize Panzoom on the IMAGE
     const panzoom = Panzoom(image, {
       maxScale: 10,
       minScale: 1,
-      contain: 'outside'   // image can move outside container when zoomed
+      contain: 'outside'
     });
 
-    // Mouse wheel zoom over the container
     container.addEventListener('wheel', function (event) {
       event.preventDefault();
       panzoom.zoomWithWheel(event);
     }, { passive: false });
 
-    // Buttons
-    zoomInBtn.addEventListener('click', function () {
-      panzoom.zoomIn();
-    });
-
-    zoomOutBtn.addEventListener('click', function () {
-      panzoom.zoomOut();
-    });
-
-    resetBtn.addEventListener('click', function () {
-      panzoom.reset();
-    });
+    zoomInBtn.addEventListener('click', () => panzoom.zoomIn());
+    zoomOutBtn.addEventListener('click', () => panzoom.zoomOut());
+    resetBtn.addEventListener('click', () => panzoom.reset());
   });
 </script>
+
+---
+
+[← Back to Home Network](./home-network.md)
