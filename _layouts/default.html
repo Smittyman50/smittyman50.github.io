@@ -88,11 +88,12 @@
         const view     = modal.querySelector('.pz-modal-view');
 
         let scale = 1;
+        let baseScale = 1;
         let translateX = 0;
         let translateY = 0;
 
-        let baseWidth = 0;
-        let baseHeight = 0;
+        let imgW = 0;
+        let imgH = 0;
 
         let isDragging = false;
         let startX = 0;
@@ -100,28 +101,47 @@
         let startTX = 0;
         let startTY = 0;
 
-        function measureBaseSize() {
-          // Temporarily reset transform to get true size at scale 1
-          const oldTransform = modalImg.style.transform;
-          modalImg.style.transform = 'none';
-          const rect = modalImg.getBoundingClientRect();
-          baseWidth = rect.width;
-          baseHeight = rect.height;
-          modalImg.style.transform = oldTransform;
+        const MAX_SCALE = 10;
+
+        function computeBaseScale() {
+          const vw = view.clientWidth;
+          const vh = view.clientHeight;
+          const nw = modalImg.naturalWidth;
+          const nh = modalImg.naturalHeight;
+
+          if (!nw || !nh || !vw || !vh) {
+            return false;
+          }
+
+          imgW = nw;
+          imgH = nh;
+
+          // Fit image into the view at initial scale
+          baseScale = Math.min(vw / nw, vh / nh, 1);
+          scale = baseScale;
+          translateX = 0;
+          translateY = 0;
+          applyTransform();
+          return true;
         }
 
         function clampTranslation() {
-          if (!baseWidth || !baseHeight) return;
+          if (!imgW || !imgH) return;
 
-          const viewRect = view.getBoundingClientRect();
+          const vw = view.clientWidth;
+          const vh = view.clientHeight;
 
-          const halfExtraWidth  = Math.max(0, (baseWidth * scale - viewRect.width) / 2);
-          const halfExtraHeight = Math.max(0, (baseHeight * scale - viewRect.height) / 2);
+          const scaledW = imgW * scale;
+          const scaledH = imgH * scale;
 
-          if (translateX >  halfExtraWidth)  translateX =  halfExtraWidth;
-          if (translateX < -halfExtraWidth)  translateX = -halfExtraWidth;
-          if (translateY >  halfExtraHeight) translateY =  halfExtraHeight;
-          if (translateY < -halfExtraHeight) translateY = -halfExtraHeight;
+          // How far the image can move before an edge leaves the view
+          const halfExtraW = Math.max(0, (scaledW - vw) / 2);
+          const halfExtraH = Math.max(0, (scaledH - vh) / 2);
+
+          if (translateX >  halfExtraW)  translateX =  halfExtraW;
+          if (translateX < -halfExtraW)  translateX = -halfExtraW;
+          if (translateY >  halfExtraH)  translateY =  halfExtraH;
+          if (translateY < -halfExtraH)  translateY = -halfExtraH;
         }
 
         function applyTransform() {
@@ -130,25 +150,32 @@
             'translate(' + translateX + 'px,' + translateY + 'px) scale(' + scale + ')';
         }
 
-        function resetTransform() {
+        function resetTransformAndMeasure() {
+          // Clear any old transform
           scale = 1;
           translateX = 0;
           translateY = 0;
           modalImg.style.transform = 'none';
-          measureBaseSize();
-          applyTransform();
+          // Now compute fitting base scale
+          computeBaseScale();
         }
 
         function openModal(src, alt) {
           modalImg.src = src;
           modalImg.alt = alt || '';
 
-          // Wait for image to load to get correct dimensions
-          const onLoad = function () {
-            modalImg.removeEventListener('load', onLoad);
-            resetTransform();
+          const init = () => {
+            resetTransformAndMeasure();
           };
-          modalImg.addEventListener('load', onLoad);
+
+          if (modalImg.complete && modalImg.naturalWidth) {
+            init();
+          } else {
+            modalImg.addEventListener('load', function handleLoad() {
+              modalImg.removeEventListener('load', handleLoad);
+              init();
+            });
+          }
 
           modal.classList.add('is-open');
           modal.setAttribute('aria-hidden', 'false');
@@ -161,23 +188,23 @@
 
         // Zoom buttons
         zoomIn.addEventListener('click', function () {
-          const newScale = scale * 1.2;
-          if (newScale <= 10) {
+          const newScale = Math.min(scale * 1.2, MAX_SCALE);
+          if (newScale !== scale) {
             scale = newScale;
             applyTransform();
           }
         });
 
         zoomOut.addEventListener('click', function () {
-          const newScale = scale / 1.2;
-          if (newScale >= 1) {
+          const newScale = Math.max(scale / 1.2, baseScale);
+          if (newScale !== scale) {
             scale = newScale;
             applyTransform();
           }
         });
 
         resetBtn.addEventListener('click', function () {
-          resetTransform();
+          resetTransformAndMeasure();
         });
 
         closeBtn.addEventListener('click', function () {
@@ -200,7 +227,7 @@
 
         // Drag-to-pan
         modalImg.addEventListener('mousedown', function (e) {
-          if (e.button !== 0) return; // left button only
+          if (e.button !== 0) return; // left-click only
           e.preventDefault();
           isDragging = true;
           modalImg.classList.add('pz-dragging');

@@ -140,7 +140,7 @@ header .cert-badges {
   margin-bottom: 20px; /* extra space so the attribution doesn't collide */
 }
 
-/* Modal overlay for interactive diagrams */
+/* Interactive diagram modal */
 
 .pz-modal-overlay {
   position: fixed;
@@ -196,6 +196,7 @@ header .cert-badges {
   justify-content: center;
 }
 
+/* The image inside the modal */
 #pz-modal-img {
   display: block;
   max-width: none;
@@ -208,8 +209,7 @@ header .cert-badges {
   cursor: grabbing;
 }
 
-/* Thumbnail that opens the modal */
-
+/* Thumbnail on the page that opens the modal */
 .pz-diagram-thumb {
   cursor: zoom-in;
   display: block;
