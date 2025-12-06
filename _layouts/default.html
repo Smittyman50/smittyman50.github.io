@@ -87,77 +87,21 @@
         const closeBtn = modal.querySelector('.pz-close');
         const view     = modal.querySelector('.pz-modal-view');
 
-        let scale = 1;
-        let baseScale = 1;
-        let translateX = 0;
-        let translateY = 0;
+        let scale = 1;        // relative: 1 = fit width, 2 = 200%, etc.
+        const MAX_SCALE = 8;  // 800% max
 
-        let imgW = 0;
-        let imgH = 0;
-
-        let isDragging = false;
-        let startX = 0;
-        let startY = 0;
-        let startTX = 0;
-        let startTY = 0;
-
-        const MAX_SCALE = 10;
-
-        function computeBaseScale() {
-          const vw = view.clientWidth;
-          const vh = view.clientHeight;
-          const nw = modalImg.naturalWidth;
-          const nh = modalImg.naturalHeight;
-
-          if (!nw || !nh || !vw || !vh) {
-            return false;
-          }
-
-          imgW = nw;
-          imgH = nh;
-
-          // Fit image into the view at initial scale
-          baseScale = Math.min(vw / nw, vh / nh, 1);
-          scale = baseScale;
-          translateX = 0;
-          translateY = 0;
-          applyTransform();
-          return true;
+        function applyScale() {
+          const widthPercent = scale * 100;
+          modalImg.style.width = widthPercent + '%';
         }
 
-        function clampTranslation() {
-          if (!imgW || !imgH) return;
-
-          const vw = view.clientWidth;
-          const vh = view.clientHeight;
-
-          const scaledW = imgW * scale;
-          const scaledH = imgH * scale;
-
-          // How far the image can move before an edge leaves the view
-          const halfExtraW = Math.max(0, (scaledW - vw) / 2);
-          const halfExtraH = Math.max(0, (scaledH - vh) / 2);
-
-          if (translateX >  halfExtraW)  translateX =  halfExtraW;
-          if (translateX < -halfExtraW)  translateX = -halfExtraW;
-          if (translateY >  halfExtraH)  translateY =  halfExtraH;
-          if (translateY < -halfExtraH)  translateY = -halfExtraH;
-        }
-
-        function applyTransform() {
-          clampTranslation();
-          modalImg.style.transform =
-            'translate(' + translateX + 'px,' + translateY + 'px) scale(' + scale + ')';
-        }
-
-        function resetTransformAndMeasure() {
-          // Clear any old transform
+        function fitToView() {
+          // Start at 1x (100% width of the container)
           scale = 1;
-          translateX = 0;
-          translateY = 0;
-          modalImg.style.transform = 'none';
-          // Now compute fitting base scale
-          computeBaseScale();
+          modalImg.style.width = '100%';
+          // Scroll to top-left
+          view.scrollTop = 0;
+          view.scrollLeft = 0;
         }
 
         function openModal(src, alt) {
@@ -165,7 +109,7 @@
           modalImg.alt = alt || '';
 
           const init = () => {
-            resetTransformAndMeasure();
+            fitToView();
           };
 
           if (modalImg.complete && modalImg.naturalWidth) {
@@ -191,20 +135,20 @@
           const newScale = Math.min(scale * 1.2, MAX_SCALE);
           if (newScale !== scale) {
             scale = newScale;
-            applyTransform();
+            applyScale();
           }
         });
 
         zoomOut.addEventListener('click', function () {
-          const newScale = Math.max(scale / 1.2, baseScale);
+          const newScale = Math.max(scale / 1.2, 1);
           if (newScale !== scale) {
             scale = newScale;
-            applyTransform();
+            applyScale();
           }
         });
 
         resetBtn.addEventListener('click', function () {
-          resetTransformAndMeasure();
+          fitToView();
         });
 
         closeBtn.addEventListener('click', function () {
@@ -223,33 +167,6 @@
           if (e.key === 'Escape' && modal.classList.contains('is-open')) {
             closeModal();
           }
-        });
-
-        // Drag-to-pan
-        modalImg.addEventListener('mousedown', function (e) {
-          if (e.button !== 0) return; // left-click only
-          e.preventDefault();
-          isDragging = true;
-          modalImg.classList.add('pz-dragging');
-          startX = e.clientX;
-          startY = e.clientY;
-          startTX = translateX;
-          startTY = translateY;
-        });
-
-        document.addEventListener('mousemove', function (e) {
-          if (!isDragging) return;
-          const dx = e.clientX - startX;
-          const dy = e.clientY - startY;
-          translateX = startTX + dx;
-          translateY = startTY + dy;
-          applyTransform();
-        });
-
-        document.addEventListener('mouseup', function () {
-          if (!isDragging) return;
-          isDragging = false;
-          modalImg.classList.remove('pz-dragging');
         });
 
         // Hook up thumbnails: click to open modal

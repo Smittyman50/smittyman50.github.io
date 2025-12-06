@@ -187,29 +187,17 @@ header .cert-badges {
   min-height: 50vh;
   max-width: 90vw;
   max-height: 80vh;
-  overflow: hidden;
+  overflow: auto;          /* scrollbars handle “panning” */
   background: #000;
   border: 1px solid #444;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-/* The image inside the modal */
+/* Image inside the modal: we will zoom by changing width only */
 #pz-modal-img {
   display: block;
-  max-width: none;
-  max-height: none;
-  cursor: grab;
-  transform-origin: center center;
-
-  /* Reset everything from the theme before JS applies transforms */
-  transform: none !important;
-}
-
-#pz-modal-img.pz-dragging {
-  cursor: grabbing;
+  max-width: none;         /* allow >100% zoom */
+  height: auto;
+  margin: 0 auto;          /* center by default */
 }
 
 /* Thumbnail on the page that opens the modal */
