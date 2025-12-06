@@ -190,13 +190,18 @@ header .cert-badges {
   overflow: hidden;
   background: #000;
   border: 1px solid #444;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #pz-modal-img {
   display: block;
+  max-width: none;
+  max-height: none;
   transform-origin: center center;
   cursor: grab;
-  /* no max-width/height: transforms control size */
 }
 
 #pz-modal-img.pz-dragging {

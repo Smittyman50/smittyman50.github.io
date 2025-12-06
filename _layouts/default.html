@@ -85,17 +85,47 @@
         const zoomOut  = modal.querySelector('.pz-zoom-out');
         const resetBtn = modal.querySelector('.pz-reset');
         const closeBtn = modal.querySelector('.pz-close');
+        const view     = modal.querySelector('.pz-modal-view');
 
         let scale = 1;
         let translateX = 0;
         let translateY = 0;
+
+        let baseWidth = 0;
+        let baseHeight = 0;
+
         let isDragging = false;
         let startX = 0;
         let startY = 0;
         let startTX = 0;
         let startTY = 0;
 
+        function measureBaseSize() {
+          // Temporarily reset transform to get true size at scale 1
+          const oldTransform = modalImg.style.transform;
+          modalImg.style.transform = 'none';
+          const rect = modalImg.getBoundingClientRect();
+          baseWidth = rect.width;
+          baseHeight = rect.height;
+          modalImg.style.transform = oldTransform;
+        }
+
+        function clampTranslation() {
+          if (!baseWidth || !baseHeight) return;
+
+          const viewRect = view.getBoundingClientRect();
+
+          const halfExtraWidth  = Math.max(0, (baseWidth * scale - viewRect.width) / 2);
+          const halfExtraHeight = Math.max(0, (baseHeight * scale - viewRect.height) / 2);
+
+          if (translateX >  halfExtraWidth)  translateX =  halfExtraWidth;
+          if (translateX < -halfExtraWidth)  translateX = -halfExtraWidth;
+          if (translateY >  halfExtraHeight) translateY =  halfExtraHeight;
+          if (translateY < -halfExtraHeight) translateY = -halfExtraHeight;
+        }
+
         function applyTransform() {
+          clampTranslation();
           modalImg.style.transform =
             'translate(' + translateX + 'px,' + translateY + 'px) scale(' + scale + ')';
         }
@@ -104,13 +134,22 @@
           scale = 1;
           translateX = 0;
           translateY = 0;
+          modalImg.style.transform = 'none';
+          measureBaseSize();
           applyTransform();
         }
 
         function openModal(src, alt) {
           modalImg.src = src;
           modalImg.alt = alt || '';
-          resetTransform();
+
+          // Wait for image to load to get correct dimensions
+          const onLoad = function () {
+            modalImg.removeEventListener('load', onLoad);
+            resetTransform();
+          };
+          modalImg.addEventListener('load', onLoad);
+
           modal.classList.add('is-open');
           modal.setAttribute('aria-hidden', 'false');
         }
@@ -159,8 +198,9 @@
           }
         });
 
-        // Drag-to-pan on the image
+        // Drag-to-pan
         modalImg.addEventListener('mousedown', function (e) {
+          if (e.button !== 0) return; // left button only
           e.preventDefault();
           isDragging = true;
           modalImg.classList.add('pz-dragging');
