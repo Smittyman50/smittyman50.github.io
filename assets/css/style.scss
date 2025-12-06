@@ -139,34 +139,71 @@ header .cert-badges {
   margin-bottom: 20px; /* extra space so the attribution doesn't collide */
 }
 
-.panzoom-wrapper {
-  margin: 1.5rem 0;
+/* Panzoom modal overlay */
+
+.pz-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
-.panzoom-controls {
+.pz-modal-overlay.is-open {
   display: flex;
+}
+
+.pz-modal-content {
+  background: #111;
+  border-radius: 4px;
+  padding: 0.75rem;
+  max-width: 95vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.pz-modal-toolbar {
+  display: flex;
+  justify-content: flex-end;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-.panzoom-controls button {
+.pz-modal-toolbar button {
   padding: 0.25rem 0.75rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   cursor: pointer;
 }
 
-.panzoom-container {
+.pz-modal-view {
   position: relative;
-  width: 100%;
-  max-height: 75vh;   // diagram viewport, can tweak
+  flex: 1;
+  min-width: 60vw;
+  min-height: 50vh;
+  max-width: 90vw;
+  max-height: 80vh;
   overflow: hidden;
+  background: #000;
   border: 1px solid #444;
 }
 
-.panzoom-img {
+#pz-modal-img {
   display: block;
-  width: 100%;        // initial fit to container width
+  max-width: none;  /* allow Panzoom to control size */
+  max-height: none;
+}
+
+/* Optional: style the thumbnail */
+.pz-diagram-thumb {
+  cursor: zoom-in;
+  display: block;
+  max-width: 100%;
   height: auto;
+  margin: 1rem 0;
 }
 
 /* Desktop / large screens: fluid layout that scales with window size */

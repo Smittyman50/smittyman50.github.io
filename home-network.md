@@ -12,20 +12,12 @@ This page outlines the design of my home network (SmittyNet) and the home lab th
 
 # Architecture Diagram
 
-<div class="panzoom-wrapper">
-  <div class="panzoom-controls">
-    <button type="button" class="pz-zoom-in">Zoom In</button>
-    <button type="button" class="pz-zoom-out">Zoom Out</button>
-    <button type="button" class="pz-reset">Reset</button>
-  </div>
-  <div class="panzoom-container">
-    <img
-      src="./images/network/home-network-lab-overview.png"
-      alt="Home Network & Lab Architecture Diagram"
-      class="panzoom-img"
-    />
-  </div>
-</div>
+<img
+  src="./images/network/home-network-lab-overview.png"
+  alt="Home Network & Lab Architecture Diagram"
+  class="pz-diagram-thumb"
+/>
+<p><small>Click the diagram to open an interactive zoomable view.</small></p>
 
 ---
 

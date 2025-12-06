@@ -51,12 +51,26 @@
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
+    <!-- Panzoom diagram modal -->
+    <div id="pz-modal" class="pz-modal-overlay" aria-hidden="true">
+      <div class="pz-modal-content">
+        <div class="pz-modal-toolbar">
+          <button type="button" class="pz-zoom-in">Zoom In</button>
+          <button type="button" class="pz-zoom-out">Zoom Out</button>
+          <button type="button" class="pz-reset">Reset</button>
+          <button type="button" class="pz-close">Close</button>
+        </div>
+        <div class="pz-modal-view">
+          <img id="pz-modal-img" src="" alt="" />
+        </div>
+      </div>
+    </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <!-- mediumZoom Library -->
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        mediumZoom('img:not(.panzoom-img)', {
+        mediumZoom('img:not(.panzoom-img):not(.pz-diagram-thumb)', {
           margin: 24,
           background: '#000',
           scrollOffset: 0
@@ -67,48 +81,88 @@
     <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.6.1/dist/panzoom.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        document.querySelectorAll('.panzoom-wrapper').forEach(wrapper => {
-          const container = wrapper.querySelector('.panzoom-container');
-          const img = container && container.querySelector('img.panzoom-img');
-          if (!container || !img) return;
+        const modal       = document.getElementById('pz-modal');
+        const modalImg    = document.getElementById('pz-modal-img');
+        const zoomInBtn   = modal.querySelector('.pz-zoom-in');
+        const zoomOutBtn  = modal.querySelector('.pz-zoom-out');
+        const resetBtn    = modal.querySelector('.pz-reset');
+        const closeBtn    = modal.querySelector('.pz-close');
+        const view        = modal.querySelector('.pz-modal-view');
 
-          const panzoom = Panzoom(img, {
-            maxScale: 8,
-            minScale: 1
-            // NOTE: no 'contain' option here
+        let modalPanzoom = null;
+
+        function openModal(src, alt) {
+          modalImg.src = src;
+          modalImg.alt = alt || '';
+
+          if (!modalPanzoom) {
+            modalPanzoom = Panzoom(modalImg, {
+              maxScale: 10,
+              minScale: 1
+            });
+          } else {
+            modalPanzoom.reset();
+          }
+
+          modal.classList.add('is-open');
+          modal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeModal() {
+          modal.classList.remove('is-open');
+          modal.setAttribute('aria-hidden', 'true');
+        }
+
+        // Buttons
+        if (zoomInBtn) {
+          zoomInBtn.addEventListener('click', function () {
+            if (modalPanzoom) modalPanzoom.zoomIn();
           });
+        }
 
-          const zoomInBtn  = wrapper.querySelector('.pz-zoom-in');
-          const zoomOutBtn = wrapper.querySelector('.pz-zoom-out');
-          const resetBtn   = wrapper.querySelector('.pz-reset');
+        if (zoomOutBtn) {
+          zoomOutBtn.addEventListener('click', function () {
+            if (modalPanzoom) modalPanzoom.zoomOut();
+          });
+        }
 
-          if (zoomInBtn) {
-            zoomInBtn.addEventListener('click', function () {
-              panzoom.zoomIn();
-            });
+        if (resetBtn) {
+          resetBtn.addEventListener('click', function () {
+            if (modalPanzoom) modalPanzoom.reset();
+          });
+        }
+
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function () {
+            closeModal();
+          });
+        }
+
+        // Click outside content to close
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) {
+            closeModal();
           }
+        });
 
-          if (zoomOutBtn) {
-            zoomOutBtn.addEventListener('click', function () {
-              panzoom.zoomOut();
-            });
-          }
+        // Optional: wheel zoom inside modal
+        view.addEventListener('wheel', function (event) {
+          if (!modalPanzoom) return;
+          event.preventDefault();
+          const zoomFactor = event.deltaY < 0 ? 1.15 : 0.85;
+          modalPanzoom.zoom(zoomFactor, {
+            animate: false,
+            focal: { x: event.clientX, y: event.clientY }
+          });
+        }, { passive: false });
 
-          if (resetBtn) {
-            resetBtn.addEventListener('click', function () {
-              panzoom.reset();
-            });
-          }
-
-          // Optional: wheel zoom, now that nothing is clamping scale
-          container.addEventListener('wheel', function (event) {
-            event.preventDefault();
-            const zoomFactor = event.deltaY < 0 ? 1.15 : 0.85;
-            panzoom.zoom(zoomFactor, {
-              animate: false,
-              focal: { x: event.clientX, y: event.clientY }
-            });
-          }, { passive: false });
+        // Hook up thumbnails
+        document.querySelectorAll('img.pz-diagram-thumb').forEach(function (thumb) {
+          thumb.addEventListener('click', function () {
+            const src = thumb.getAttribute('data-pz-full') || thumb.src;
+            const alt = thumb.alt || '';
+            openModal(src, alt);
+          });
         });
       });
     </script>
