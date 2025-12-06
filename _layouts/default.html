@@ -95,6 +95,7 @@
           modalImg.src = src;
           modalImg.alt = alt || '';
 
+          // (Re)initialize Panzoom for this image
           if (!modalPanzoom) {
             modalPanzoom = Panzoom(modalImg, {
               maxScale: 10,
@@ -113,7 +114,7 @@
           modal.setAttribute('aria-hidden', 'true');
         }
 
-        // Buttons
+        // Button controls
         if (zoomInBtn) {
           zoomInBtn.addEventListener('click', function () {
             if (modalPanzoom) modalPanzoom.zoomIn();
@@ -145,18 +146,7 @@
           }
         });
 
-        // Optional: wheel zoom inside modal
-        view.addEventListener('wheel', function (event) {
-          if (!modalPanzoom) return;
-          event.preventDefault();
-          const zoomFactor = event.deltaY < 0 ? 1.15 : 0.85;
-          modalPanzoom.zoom(zoomFactor, {
-            animate: false,
-            focal: { x: event.clientX, y: event.clientY }
-          });
-        }, { passive: false });
-
-        // Hook up thumbnails
+        // Hook up thumbnails (click to open modal)
         document.querySelectorAll('img.pz-diagram-thumb').forEach(function (thumb) {
           thumb.addEventListener('click', function () {
             const src = thumb.getAttribute('data-pz-full') || thumb.src;
