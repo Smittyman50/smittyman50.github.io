@@ -201,8 +201,11 @@ header .cert-badges {
   display: block;
   max-width: none;
   max-height: none;
-  transform-origin: center center;
   cursor: grab;
+  transform-origin: center center;
+
+  /* Reset everything from the theme before JS applies transforms */
+  transform: none !important;
 }
 
 #pz-modal-img.pz-dragging {
