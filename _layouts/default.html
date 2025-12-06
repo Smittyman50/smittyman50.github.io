@@ -96,10 +96,22 @@
         }
 
         function fitToView() {
-          // Start at 1x (100% width of the container)
-          scale = 1;
-          modalImg.style.width = '100%';
-          // Scroll to top-left
+          const nw = modalImg.naturalWidth;
+          const nh = modalImg.naturalHeight;
+          const vw = view.clientWidth;
+          const vh = view.clientHeight;
+          if (!nw || !nh || !vw || !vh) {
+            return;
+          }
+
+          // Fit to WIDTH only; allow vertical overflow if needed.
+          const scaleToFitW = vw / nw;
+          const fitScale = Math.min(scaleToFitW, 1);
+
+          baseWidth = nw * fitScale;
+          scale = 1;  // relative to baseWidth
+
+          modalImg.style.width = baseWidth + 'px';
           view.scrollTop = 0;
           view.scrollLeft = 0;
         }

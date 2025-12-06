@@ -187,17 +187,20 @@ header .cert-badges {
   min-height: 50vh;
   max-width: 90vw;
   max-height: 80vh;
-  overflow: auto;          /* scrollbars handle “panning” */
+  overflow-x: auto;      /* allow horizontal scroll */
+  overflow-y: auto;      /* allow vertical scroll */
   background: #000;
   border: 1px solid #444;
+  /* IMPORTANT: no display:flex here */
 }
 
 /* Image inside the modal: we will zoom by changing width only */
 #pz-modal-img {
   display: block;
-  max-width: none;         /* allow >100% zoom */
+  max-width: none;
+  max-height: none;
   height: auto;
-  margin: 0 auto;          /* center by default */
+  margin: 0 auto;   /* centered at base zoom */
 }
 
 /* Thumbnail on the page that opens the modal */
