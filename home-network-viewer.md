@@ -3,7 +3,7 @@ layout: default
 title: Home Network Diagram (Interactive Viewer)
 ---
 
-[← Back to Home Network](./home-network.md)
+[← Back to Home Network & Home Lab](./home-network.md)
 
 # Home Network & Lab Architecture Diagram (Interactive Viewer)
 
@@ -58,4 +58,4 @@ Scroll the mouse wheel over the diagram to zoom, and drag to pan.
 
 ---
 
-[← Back to Home Network](./home-network.md)
+[← Back to Home Network & Home Lab](./home-network.md)

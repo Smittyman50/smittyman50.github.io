@@ -10,7 +10,7 @@ This page highlights how I use Obsidian, PARA + Zettelkasten principles, and AI-
 
 My knowledge system combines Obsidian’s flexibility with PARA for structure, Zettelkasten for idea development, and locally run AI models for synthesis and retrieval. This creates an environment where information flows smoothly from capture to long-term understanding.
 
-<img src="./images/knowledge/second-brain-architecture.png" alt="Second Brain Architecture Diagram" class="center"/>
+![Second Brain Architecture Diagram](./images/knowledge/second-brain-architecture.png)
 
 *Figure: High-level architecture showing how PARA, Zettelkasten, and AI tools interact.*
 
@@ -144,7 +144,7 @@ via:
 - OpenWebUI  
 - Ollama API endpoints
 
-<img src="./images/knowledge/local-llm-architecture.png" alt="Local LLM Architecture Diagram" class="center"/>
+![Local LLM Architecture Diagram](./images/knowledge/local-llm-architecture.png)
 
 *Figure: Integration between Obsidian, Msty, Companion, and local LLMs running in my home network.*
 

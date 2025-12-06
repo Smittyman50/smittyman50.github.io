@@ -4,7 +4,7 @@ layout: default
 
 [← Back to Home](./index.md)
 
-# Home Network & Home Lab Architecture
+# Home Network & Home Lab
 
 This page outlines the design of my home network (SmittyNet) and the home lab that runs inside it. The diagram below shows the overall layout, including the switching and routing foundation, the VLAN structure, and how the lab systems connect.
 
