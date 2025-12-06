@@ -140,76 +140,37 @@ header .cert-badges {
   margin-bottom: 20px; /* extra space so the attribution doesn't collide */
 }
 
-/* Interactive diagram modal */
-
-.pz-modal-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: rgba(0, 0, 0, 0.85);
-  display: none;
-  align-items: center;
-  justify-content: center;
+.diagram-viewer {
+  margin: 1.5rem 0;
 }
 
-.pz-modal-overlay.is-open {
+.diagram-controls {
   display: flex;
-}
-
-.pz-modal-content {
-  background: #111;
-  border-radius: 4px;
-  padding: 0.75rem;
-  max-width: 95vw;
-  max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-}
-
-.pz-modal-toolbar {
-  display: flex;
-  justify-content: flex-end;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
-.pz-modal-toolbar button {
+.diagram-controls button {
   padding: 0.25rem 0.75rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   cursor: pointer;
 }
 
-.pz-modal-view {
+#diagram-container {
   position: relative;
-  flex: 1;
-  min-width: 60vw;
-  min-height: 50vh;
-  max-width: 90vw;
+  width: 100%;
   max-height: 80vh;
-  overflow-x: auto;      /* allow horizontal scroll */
-  overflow-y: auto;      /* allow vertical scroll */
-  background: #000;
+  overflow-x: auto;
+  overflow-y: auto;
   border: 1px solid #444;
-  /* IMPORTANT: no display:flex here */
+  background: #000;
 }
 
-/* Image inside the modal: we will zoom by changing width only */
-#pz-modal-img {
+/* Image inside the separate viewer */
+.diagram-viewer-img {
   display: block;
   max-width: none;
-  max-height: none;
   height: auto;
-  margin: 0 auto;   /* centered at base zoom */
-}
-
-/* Thumbnail on the page that opens the modal */
-.pz-diagram-thumb {
-  cursor: zoom-in;
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1rem 0;
 }
 
 /* Desktop / large screens: fluid layout that scales with window size */
