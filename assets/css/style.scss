@@ -140,7 +140,7 @@ header .cert-badges {
   margin-bottom: 20px; /* extra space so the attribution doesn't collide */
 }
 
-/* Panzoom modal overlay */
+/* Modal overlay for interactive diagrams */
 
 .pz-modal-overlay {
   position: fixed;
@@ -194,11 +194,17 @@ header .cert-badges {
 
 #pz-modal-img {
   display: block;
-  max-width: none;  /* allow Panzoom to control size */
-  max-height: none;
+  transform-origin: center center;
+  cursor: grab;
+  /* no max-width/height: transforms control size */
 }
 
-/* Optional: style the thumbnail */
+#pz-modal-img.pz-dragging {
+  cursor: grabbing;
+}
+
+/* Thumbnail that opens the modal */
+
 .pz-diagram-thumb {
   cursor: zoom-in;
   display: block;

@@ -51,7 +51,19 @@
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-    <!-- Panzoom diagram modal -->
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <!-- mediumZoom Library -->
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        mediumZoom('img:not(.pz-diagram-thumb)', {
+          margin: 24,
+          background: '#000',
+          scrollOffset: 0
+        });
+      });
+    </script>
+    <!-- Interactive diagram modal -->
     <div id="pz-modal" class="pz-modal-overlay" aria-hidden="true">
       <div class="pz-modal-content">
         <div class="pz-modal-toolbar">
@@ -65,46 +77,40 @@
         </div>
       </div>
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <!-- mediumZoom Library -->
-    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        mediumZoom('img:not(.panzoom-img):not(.pz-diagram-thumb)', {
-          margin: 24,
-          background: '#000',
-          scrollOffset: 0
-        });
-      });
-    </script>
-    <!-- Panzoom Library -->
-    <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.6.1/dist/panzoom.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const modal       = document.getElementById('pz-modal');
-        const modalImg    = document.getElementById('pz-modal-img');
-        const zoomInBtn   = modal.querySelector('.pz-zoom-in');
-        const zoomOutBtn  = modal.querySelector('.pz-zoom-out');
-        const resetBtn    = modal.querySelector('.pz-reset');
-        const closeBtn    = modal.querySelector('.pz-close');
-        const view        = modal.querySelector('.pz-modal-view');
+        const modal    = document.getElementById('pz-modal');
+        const modalImg = document.getElementById('pz-modal-img');
+        const zoomIn   = modal.querySelector('.pz-zoom-in');
+        const zoomOut  = modal.querySelector('.pz-zoom-out');
+        const resetBtn = modal.querySelector('.pz-reset');
+        const closeBtn = modal.querySelector('.pz-close');
 
-        let modalPanzoom = null;
+        let scale = 1;
+        let translateX = 0;
+        let translateY = 0;
+        let isDragging = false;
+        let startX = 0;
+        let startY = 0;
+        let startTX = 0;
+        let startTY = 0;
+
+        function applyTransform() {
+          modalImg.style.transform =
+            'translate(' + translateX + 'px,' + translateY + 'px) scale(' + scale + ')';
+        }
+
+        function resetTransform() {
+          scale = 1;
+          translateX = 0;
+          translateY = 0;
+          applyTransform();
+        }
 
         function openModal(src, alt) {
           modalImg.src = src;
           modalImg.alt = alt || '';
-
-          // (Re)initialize Panzoom for this image
-          if (!modalPanzoom) {
-            modalPanzoom = Panzoom(modalImg, {
-              maxScale: 10,
-              minScale: 1
-            });
-          } else {
-            modalPanzoom.reset();
-          }
-
+          resetTransform();
           modal.classList.add('is-open');
           modal.setAttribute('aria-hidden', 'false');
         }
@@ -114,39 +120,72 @@
           modal.setAttribute('aria-hidden', 'true');
         }
 
-        // Button controls
-        if (zoomInBtn) {
-          zoomInBtn.addEventListener('click', function () {
-            if (modalPanzoom) modalPanzoom.zoomIn();
-          });
-        }
+        // Zoom buttons
+        zoomIn.addEventListener('click', function () {
+          const newScale = scale * 1.2;
+          if (newScale <= 10) {
+            scale = newScale;
+            applyTransform();
+          }
+        });
 
-        if (zoomOutBtn) {
-          zoomOutBtn.addEventListener('click', function () {
-            if (modalPanzoom) modalPanzoom.zoomOut();
-          });
-        }
+        zoomOut.addEventListener('click', function () {
+          const newScale = scale / 1.2;
+          if (newScale >= 1) {
+            scale = newScale;
+            applyTransform();
+          }
+        });
 
-        if (resetBtn) {
-          resetBtn.addEventListener('click', function () {
-            if (modalPanzoom) modalPanzoom.reset();
-          });
-        }
+        resetBtn.addEventListener('click', function () {
+          resetTransform();
+        });
 
-        if (closeBtn) {
-          closeBtn.addEventListener('click', function () {
-            closeModal();
-          });
-        }
+        closeBtn.addEventListener('click', function () {
+          closeModal();
+        });
 
-        // Click outside content to close
+        // Close when clicking outside content
         modal.addEventListener('click', function (e) {
           if (e.target === modal) {
             closeModal();
           }
         });
 
-        // Hook up thumbnails (click to open modal)
+        // ESC to close
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+            closeModal();
+          }
+        });
+
+        // Drag-to-pan on the image
+        modalImg.addEventListener('mousedown', function (e) {
+          e.preventDefault();
+          isDragging = true;
+          modalImg.classList.add('pz-dragging');
+          startX = e.clientX;
+          startY = e.clientY;
+          startTX = translateX;
+          startTY = translateY;
+        });
+
+        document.addEventListener('mousemove', function (e) {
+          if (!isDragging) return;
+          const dx = e.clientX - startX;
+          const dy = e.clientY - startY;
+          translateX = startTX + dx;
+          translateY = startTY + dy;
+          applyTransform();
+        });
+
+        document.addEventListener('mouseup', function () {
+          if (!isDragging) return;
+          isDragging = false;
+          modalImg.classList.remove('pz-dragging');
+        });
+
+        // Hook up thumbnails: click to open modal
         document.querySelectorAll('img.pz-diagram-thumb').forEach(function (thumb) {
           thumb.addEventListener('click', function () {
             const src = thumb.getAttribute('data-pz-full') || thumb.src;
