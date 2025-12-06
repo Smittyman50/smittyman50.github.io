@@ -160,16 +160,17 @@ header .cert-badges {
   position: relative;
   width: 100%;
   max-height: 80vh;
-  overflow-x: auto;
-  overflow-y: auto;
+  overflow: hidden;       // Panzoom handles panning inside
   border: 1px solid #444;
   background: #000;
 }
 
-/* Image inside the separate viewer */
+/* Image inside the viewer: Panzoom will transform this element */
 .diagram-viewer-img {
   display: block;
   max-width: none;
+  max-height: none;
+  width: 100%;            // start fitted to container
   height: auto;
 }
 

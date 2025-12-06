@@ -4,7 +4,7 @@ title: Home Network Diagram (Interactive Viewer)
 ---
 
 <h1>Home Network &amp; Lab Architecture Diagram (Interactive Viewer)</h1>
-<p>Use the controls below to zoom in and out. Scroll inside the viewer to pan around the diagram.</p>
+<p>Use the controls below to zoom and pan around the diagram. Scroll the mouse wheel over the diagram to zoom, and drag to pan.</p>
 
 <div class="diagram-viewer">
   <div class="diagram-controls">
@@ -18,78 +18,46 @@ title: Home Network Diagram (Interactive Viewer)
       id="diagram-image"
       class="diagram-viewer-img"
       src="./images/network/home-network-lab-overview.png"
-      alt="Home Network & Lab Architecture Diagram"
+      alt="Home Network &amp; Lab Architecture Diagram"
     />
   </div>
 </div>
 
+<!-- Panzoom library -->
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.6.1/dist/panzoom.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const container = document.getElementById('diagram-container');
-    const img       = document.getElementById('diagram-image');
-    const zoomInBtn = document.getElementById('diag-zoom-in');
-    const zoomOutBtn= document.getElementById('diag-zoom-out');
-    const resetBtn  = document.getElementById('diag-reset');
+    const image     = document.getElementById('diagram-image');
 
-    let baseWidth = 0;     // fitted width in pixels
-    let scale     = 1;     // relative zoom (1 = baseWidth)
-    const MAX_SCALE = 8;   // up to 800%
+    const zoomInBtn  = document.getElementById('diag-zoom-in');
+    const zoomOutBtn = document.getElementById('diag-zoom-out');
+    const resetBtn   = document.getElementById('diag-reset');
 
-    function applyScale() {
-      if (!baseWidth) return;
-      const newWidth = baseWidth * scale;
-      img.style.width = newWidth + 'px';
-    }
+    // Initialize Panzoom on the IMAGE
+    const panzoom = Panzoom(image, {
+      maxScale: 10,
+      minScale: 1,
+      contain: 'outside'   // image can move outside container when zoomed
+    });
 
-    function fitToWidth() {
-      const nw = img.naturalWidth;
-      const vh = container.clientHeight;
-      const vw = container.clientWidth;
+    // Mouse wheel zoom over the container
+    container.addEventListener('wheel', function (event) {
+      event.preventDefault();
+      panzoom.zoomWithWheel(event);
+    }, { passive: false });
 
-      if (!nw || !vw) return;
-
-      // Fit to container width, but never exceed natural width
-      const fitScale = Math.min(vw / nw, 1);
-
-      baseWidth = nw * fitScale;
-      scale = 1;
-      img.style.width = baseWidth + 'px';
-
-      container.scrollLeft = 0;
-      container.scrollTop = 0;
-    }
-
-    function init() {
-      fitToWidth();
-    }
-
-    if (img.complete && img.naturalWidth) {
-      init();
-    } else {
-      img.addEventListener('load', function handleLoad() {
-        img.removeEventListener('load', handleLoad);
-        init();
-      });
-    }
-
+    // Buttons
     zoomInBtn.addEventListener('click', function () {
-      const newScale = Math.min(scale * 1.2, MAX_SCALE);
-      if (newScale !== scale) {
-        scale = newScale;
-        applyScale();
-      }
+      panzoom.zoomIn();
     });
 
     zoomOutBtn.addEventListener('click', function () {
-      const newScale = Math.max(scale / 1.2, 1);
-      if (newScale !== scale) {
-        scale = newScale;
-        applyScale();
-      }
+      panzoom.zoomOut();
     });
 
     resetBtn.addEventListener('click', function () {
-      fitToWidth();
+      panzoom.reset();
     });
   });
 </script>
