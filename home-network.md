@@ -12,8 +12,6 @@ This page outlines the design of my home network (SmittyNet) and the home lab th
 
 # Architecture Diagram
 
-Use the controls below to zoom and pan around the diagram. Scroll the mouse wheel over the diagram to zoom, and drag to pan.
-
 <div class="diagram-viewer">
   <div class="diagram-controls">
     <button type="button" id="diag-zoom-in">Zoom In</button>
@@ -59,6 +57,8 @@ Use the controls below to zoom and pan around the diagram. Scroll the mouse whee
     resetBtn.addEventListener('click', () => panzoom.reset());
   });
 </script>
+
+*Use the controls above to zoom and pan around the diagram. Scroll the mouse wheel over the diagram to zoom, and drag to pan.*
 
 ---
 
