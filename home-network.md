@@ -25,10 +25,10 @@ SmittyNet provides the core network services for the house and the lab. It inclu
 ## 1.1 Core Components
 
 - MikroTik CRS switches
-  - L2 Connectivity (Edge ports and inter-switch trunking)
-  - L3 Routing (Local & WAN)
-  - Firewalling
-  - CAPsMAN for centralized AP control
+ - L2 Connectivity (Edge ports and inter-switch trunking)
+ - L3 Routing (Local & WAN)
+ - Firewalling
+ - CAPsMAN for centralized AP control
 - Trunked VLANs to Proxmox nodes and TrueNAS
 - Segmentation for management, servers, IoT, media, and user devices
 
@@ -62,7 +62,6 @@ The lab runs on a Proxmox virtualization stack supported by several Raspberry Pi
 ### Proxmox
 
 Typical workloads include:
-
 - Core services  
 - Application and development VMs  
 - AI/ML support systems  
@@ -75,7 +74,6 @@ Both LXC and Docker-based services run in this environment depending on the task
 In addition to Proxmox, several Raspberry Pi devices provide flexible compute for smaller projects and testing.
 
 These run standard Linux images and are used for:
-
 - Containerized applications (via Docker)  
 - Lightweight services and API endpoints  
 - Prototyping automation scripts  
@@ -89,7 +87,6 @@ The Pis operate independently from Proxmox but participate in the same segmentat
 TrueNAS SCALE provides ZFS-backed storage for the lab.
 
 Capabilities include:
-
 - ZFS pools and datasets  
 - Snapshots and replication  
 - NFS/iSCSI exports to Proxmox  
@@ -98,7 +95,6 @@ Capabilities include:
 ## 2.3 Services
 
 Examples of services hosted in the lab:
-
 - Internal DNS/DHCP  
 - Certificate authority  
 - Monitoring and metrics collection  
@@ -112,7 +108,6 @@ Examples of services hosted in the lab:
 # 3. Automation
 
 Automation in the lab uses:
-
 - **Terraform** for provisioning resources  
 - **Ansible** for configuring hosts and services  
 - **Python** for utility tooling and workflow automation  
