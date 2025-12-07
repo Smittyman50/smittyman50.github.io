@@ -100,7 +100,7 @@ The home lab sits on top of SmittyNet and provides compute and storage for devel
 
 The lab runs on a Proxmox virtualization stack supported by several Raspberry Pi devices that are used for lightweight experimentation and standalone services.
 
-#### Proxmox
+**Proxmox**
 
 Typical workloads include:
 - Core services  
@@ -110,7 +110,7 @@ Typical workloads include:
 
 Both LXC and Docker-based services run in this environment depending on the task.
 
-#### Raspberry Pi Systems
+**Raspberry Pi Systems**
 
 In addition to Proxmox, several Raspberry Pi devices provide flexible compute for smaller projects and testing.
 
