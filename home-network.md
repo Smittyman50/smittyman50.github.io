@@ -24,13 +24,10 @@ SmittyNet provides the core network services for the house and the lab. It inclu
 
 ## 1.1 Core Components
 
-- MikroTik CRS switches
-  - L2 Connectivity (Edge ports and inter-switch trunking)
-  - L3 Routing (Local & WAN)
-  - Firewalling
-  - CAPsMAN for centralized AP control
+- MikroTik CRS switches (Switching | Routing | Firewalling)
+- CAPsMAN for centralized AP control
 - Trunked VLANs to Proxmox nodes and TrueNAS
-- Segmentation for management, servers, IoT, media, and user devices
+- VLAN Segmentation for management, servers, IoT, media, and user devices
 
 ## 1.2 VLAN Layout
 
