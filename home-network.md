@@ -10,7 +10,7 @@ This page outlines the design of my home network (SmittyNet) and the home lab th
 
 ---
 
-# Architecture Diagram
+## Architecture Diagram
 
 <div class="diagram-viewer">
   <div class="diagram-controls">
@@ -62,18 +62,18 @@ This page outlines the design of my home network (SmittyNet) and the home lab th
 
 ---
 
-# 1. Home Network (SmittyNet)
+## 1. Home Network (SmittyNet)
 
 SmittyNet provides the core network services for the house and the lab. It includes the switching fabric, the router/firewall, and wireless management using MikroTik’s CAPsMAN.
 
-## 1.1 Core Components
+### 1.1 Core Components
 
 - MikroTik CRS switches (Switching, Routing, Firewalling)
 - CAPsMAN for centralized AP control
 - Trunked VLANs to Proxmox nodes and TrueNAS
 - VLAN Segmentation for management, servers, IoT, media, and user devices
 
-## 1.2 VLAN Layout
+### 1.2 VLAN Layout
 
 | VLAN | Purpose |
 |------|---------|
@@ -86,21 +86,21 @@ SmittyNet provides the core network services for the house and the lab. It inclu
 
 This structure keeps traffic organized and provides clear separation between trusted and untrusted devices.
 
-## 1.3 Wireless (CAPsMAN)
+### 1.3 Wireless (CAPsMAN)
 
 CAPsMAN manages SSIDs, security settings, channel assignments, and power levels for all access points. VRRP is configured for the controller IP to keep AP management available during maintenance on my MikroTik CRS switches.
 
 ---
 
-# 2. Home Lab
+## 2. Home Lab
 
 The home lab sits on top of SmittyNet and provides compute and storage for development work, local AI inference, PKM automation, and general experimentation.
 
-## 2.1 Compute (Proxmox and Raspberry Pi Systems)
+### 2.1 Compute (Proxmox and Raspberry Pi Systems)
 
 The lab runs on a Proxmox virtualization stack supported by several Raspberry Pi devices that are used for lightweight experimentation and standalone services.
 
-### Proxmox
+#### Proxmox
 
 Typical workloads include:
 - Core services  
@@ -110,7 +110,7 @@ Typical workloads include:
 
 Both LXC and Docker-based services run in this environment depending on the task.
 
-### Raspberry Pi Systems
+#### Raspberry Pi Systems
 
 In addition to Proxmox, several Raspberry Pi devices provide flexible compute for smaller projects and testing.
 
@@ -123,7 +123,7 @@ These run standard Linux images and are used for:
 
 The Pis operate independently from Proxmox but participate in the same segmentation model, allowing them to integrate cleanly into the broader environment.
 
-## 2.2 Storage (TrueNAS SCALE)
+### 2.2 Storage (TrueNAS SCALE)
 
 TrueNAS SCALE provides ZFS-backed storage for the lab.
 
@@ -133,7 +133,7 @@ Capabilities include:
 - NFS/iSCSI exports to Proxmox  
 - Incus containers for storage-adjacent workloads  
 
-## 2.3 Services
+### 2.3 Services
 
 Examples of services hosted in the lab:
 - Internal DNS/DHCP  
@@ -146,7 +146,7 @@ Examples of services hosted in the lab:
 
 ---
 
-# 3. Automation
+## 3. Automation
 
 Automation in the lab uses:
 - **Terraform** for provisioning resources  
