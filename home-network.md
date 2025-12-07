@@ -88,9 +88,9 @@ This structure keeps traffic organized and provides clear separation between tru
 
 ### 1.3 Wireless (CAPsMAN)
 
-![CAPsMAN VRRP Configuration](./images/network/CAPsMAN.png)
-
 CAPsMAN manages SSIDs, security settings, channel assignments, and power levels for all access points. VRRP is configured for the controller IP to keep AP management available during maintenance on my MikroTik CRS switches.
+
+![CAPsMAN VRRP Configuration](./images/network/CAPsMAN.png)
 
 ---
 
