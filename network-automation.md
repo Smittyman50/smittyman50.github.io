@@ -25,6 +25,7 @@ This page contains selected examples of network architectures, cloud connectivit
 |   |   |   |
 
 ### 2.3 Python Automation Repositories
+
 | Script / Tool | Purpose | Repo |
 |-------------------------------|---------------------------------------------------------|------|
 |   |   |   |
