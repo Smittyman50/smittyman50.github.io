@@ -16,15 +16,18 @@ This page contains selected examples of network architectures, cloud connectivit
 
 | Script / Tool | Purpose | Repo |
 |-------------------------------|---------------------------------------------------------|------|
+|   |   |   |
 
 ### 2.2 Ansible Repositories
 
 | Script / Tool | Purpose | Repo |
 |-------------------------------|---------------------------------------------------------|------|
+|   |   |   |
 
 ### 2.3 Python Automation Repositories
 | Script / Tool | Purpose | Repo |
 |-------------------------------|---------------------------------------------------------|------|
+|   |   |   |
 
 <br>
 
