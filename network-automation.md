@@ -14,9 +14,19 @@ This page contains selected examples of network architectures, cloud connectivit
 
 ### 2.1 Terraform Repositories
 
+| Script / Tool | Purpose | Repo |
+|-------------------------------|---------------------------------------------------------|------|
+
 ### 2.2 Ansible Repositories
 
+| Script / Tool | Purpose | Repo |
+|-------------------------------|---------------------------------------------------------|------|
+
 ### 2.3 Python Automation Repositories
+| Script / Tool | Purpose | Repo |
+|-------------------------------|---------------------------------------------------------|------|
+
+<br>
 
 ---
 
