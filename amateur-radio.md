@@ -75,12 +75,16 @@ I maintain several tools to support APRS, packet handling, and HF digital modes.
 |-------------------------------|---------------------------------------------------------|------|
 | TCP Fan-Out Daemon | Distributes packet or decode data to multiple tools. |      |
 | Audio Interface Helpers | Manages ALSA soundcard detection and stability. |      |
+<br>
+---
 
 ## Future Expansion
 - Additional HF automation  
 - APRS telemetry  
 - SDR receiver improvements  
 - More packet-processing workflows  
+
+---
 
 ## LoRa and ISM-Band Experiments
 
