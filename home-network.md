@@ -8,10 +8,6 @@ layout: default
 
 This page outlines the design of my home network (SmittyNet) and the home lab that runs inside it. The diagram below shows the overall layout, including the switching and routing foundation, the VLAN structure, and how the lab systems connect.
 
----
-
-## Architecture Diagram
-
 <div class="diagram-viewer">
   <div class="diagram-controls">
     <button type="button" id="diag-zoom-in">Zoom In</button>
