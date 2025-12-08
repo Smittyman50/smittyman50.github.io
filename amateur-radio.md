@@ -29,7 +29,7 @@ This page outlines my amateur radio setup, how the radios tie into my home netwo
 
 ### HF Digital Modes (WSJT-X)
 
-WSJT-X runs on my lab systems and interfaces with the **IC-7300** for FT8/FT4 and other HF digital modes. I use the WSJT-X 2.7.x JSON-based UDP protocol and maintain scripts that parse activity and decoded packets.
+WSJT-X runs on my lab systems and interfaces with the **IC-7300** for FT8/FT4 and other HF digital modes.
 
 The **G90** is used for portable digital work when needed but is not part of the main digital setup.
 
@@ -39,10 +39,10 @@ Direwolf operates alongside the **FTM-3100R** for APRS and packet decoding.
 
 This setup includes:
 - USB soundcard interface  
-- Virtual KISS interface for testing (`socat`)  
+- Virtual KISS interface for testing 
 - APRS-IS forwarding  
 - Packet filtering and parsing  
-- Optional APRX integration  
+- APRX integration  
 
 The **TM-D700A** is used for monitoring and voice, not APRS.
 
@@ -53,9 +53,8 @@ The **TM-D700A** is used for monitoring and voice, not APRS.
 Digital-mode applications run on Raspberry Pis or lab systems.
 
 Key points:
-- RF → radio → soundcard → Direwolf or WSJT-X  
-- Segmented VLAN placement for RF-related systems  
-- Packet forwarding and monitoring inside the lab  
+- RF → radio → soundcard → Direwolf or WSJT-X
+- Packet forwarding and monitoring inside the lab
 
 ---
 
@@ -76,8 +75,6 @@ I maintain several tools to support APRS, packet handling, and HF digital modes.
 |-------------------------------|---------------------------------------------------------|------|
 | TCP Fan-Out Daemon | Distributes packet or decode data to multiple tools. |      |
 | Audio Interface Helpers | Manages ALSA soundcard detection and stability. |      |
-
----
 
 ## Future Expansion
 - Additional HF automation  
