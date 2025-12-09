@@ -23,6 +23,16 @@
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
+        <div class="cert-badges">
+          {% for cert in site.data.certifications %}
+            <a href="{{ cert.url }}" target="_blank" rel="noopener noreferrer">
+              <span class="cert-badge {{ cert.css }}">
+                {{ cert.name }}
+              </span>
+            </a>
+          {% endfor %}
+        </div>
+
         {% if site.github.is_project_page %}
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
         {% endif %}
