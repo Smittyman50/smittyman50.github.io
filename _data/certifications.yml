@@ -1,0 +1,35 @@
+- name: AWS Machine Learning
+  css: aws-spec
+  url: https://www.credly.com/badges/<badge-id>
+
+- name: AWS Solutions Architect
+  css: aws-assoc
+  url: https://www.credly.com/badges/<badge-id>
+
+- name: AWS Developer
+  css: aws-assoc
+  url: https://www.credly.com/badges/<badge-id>
+
+- name: AWS SysOps Administrator
+  css: aws-assoc
+  url: https://www.credly.com/badges/<badge-id>
+
+- name: AWS Cloud Practitioner
+  css: aws-found
+  url: https://www.credly.com/badges/<badge-id>
+
+- name: CISSP
+  css: sec
+  url: https://www.credly.com/badges/<badge-id>
+
+- name: PMP
+  css: pm
+  url: https://www.credly.com/badges/<badge-id>
+
+- name: ITIL v3 Foundation
+  css: proc
+  url: https://www.credly.com/badges/<badge-id>
+
+- name: Lean Six Sigma Green Belt
+  css: proc
+  url: https://www.credly.com/badges/<badge-id>

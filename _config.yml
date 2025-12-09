@@ -2,19 +2,6 @@ title: "Michael Smith"
 description: >
   Portfolio showcasing 30+ years of experience in networking, cloud architecture, and AI/ML development.
   <br>
-
-  <!-- Certification Logos -->
-  <div class="cert-badges">
-    <span class="cert-badge aws-spec">AWS Machine Learning</span>
-    <span class="cert-badge aws-assoc">AWS Solutions Architect</span>
-    <span class="cert-badge aws-assoc">AWS Developer</span>
-    <span class="cert-badge aws-assoc">AWS SysOps Administrator</span>
-    <span class="cert-badge aws-found">AWS Cloud Practitioner</span>
-    <span class="cert-badge sec">CISSP</span>
-    <span class="cert-badge pm">PMP</span>
-    <span class="cert-badge proc">ITIL v3 Foundation</span>
-    <span class="cert-badge proc">Lean Six Sigma Green Belt</span>
-  </div>
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme

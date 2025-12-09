@@ -7,3 +7,13 @@
 
   gtag('config', 'G-7DPDQQKD5T');
 </script>
+
+<div class="cert-badges">
+  {% for cert in site.data.certifications %}
+    <a href="{{ cert.url }}" target="_blank" rel="noopener noreferrer">
+      <span class="cert-badge {{ cert.css }}">
+        {{ cert.name }}
+      </span>
+    </a>
+  {% endfor %}
+</div>
