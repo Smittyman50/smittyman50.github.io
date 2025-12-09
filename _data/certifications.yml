@@ -1,35 +1,39 @@
 - name: AWS Machine Learning
   css: aws-spec
-  url: https://www.credly.com/badges/<badge-id>
+  url: https://www.credly.com/badges/6e9993e4-79cf-46d0-b4e1-a9219e7eb1ef
 
 - name: AWS Solutions Architect
   css: aws-assoc
-  url: https://www.credly.com/badges/<badge-id>
+  url: https://www.credly.com/badges/d23b076d-b9e8-41c7-8db3-3ba2adf9b0e9
 
 - name: AWS Developer
   css: aws-assoc
-  url: https://www.credly.com/badges/<badge-id>
+  url: https://www.credly.com/badges/d9434692-58b2-4f9b-8380-0aa51bb646bd
 
 - name: AWS SysOps Administrator
   css: aws-assoc
-  url: https://www.credly.com/badges/<badge-id>
+  url: https://www.credly.com/badges/8741d0d4-9e86-465e-9ee6-47f4486f36ce
 
 - name: AWS Cloud Practitioner
   css: aws-found
-  url: https://www.credly.com/badges/<badge-id>
+  url: https://www.credly.com/badges/ca3adaff-9420-4f85-a164-dadf13e70ee4
 
 - name: CISSP
   css: sec
-  url: https://www.credly.com/badges/<badge-id>
+  url: https://www.credly.com/badges/5d2c635c-08c4-468f-9c27-50a00c30956c
 
 - name: PMP
   css: pm
-  url: https://www.credly.com/badges/<badge-id>
+  url: https://www.credly.com/badges/ef967676-0cba-48b7-a5d6-61df12fe00ef
+
+- name: TOGAF 9.1 Foundation
+  css: proc
+  url: https://www.credly.com/badges/51d224dd-be5c-4da9-b518-60483356668a
 
 - name: ITIL v3 Foundation
   css: proc
-  url: https://www.credly.com/badges/<badge-id>
+  # no url → not clickable
 
 - name: Lean Six Sigma Green Belt
   css: proc
-  url: https://www.credly.com/badges/<badge-id>
+  # no url → not clickable
