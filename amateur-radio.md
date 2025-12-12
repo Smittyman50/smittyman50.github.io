@@ -4,6 +4,8 @@
 
 This page outlines my amateur radio setup, how the radios tie into my home network and lab, and the scripts I use to support HF digital modes, APRS, and packet work. Each radio in the station fills a specific role across HF and VHF/UHF operation.
 
+![Ham Shack Diagram](./images/radio/ham-shack.png)
+
 ---
 
 ## Radio Equipment
