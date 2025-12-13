@@ -122,6 +122,12 @@ These run standard Linux images and are used for:
 
 The Pis operate independently from Proxmox but participate in the same segmentation model, allowing them to integrate cleanly into the broader environment.
 
+### Docker Applications
+
+| Application(s) | Purpose | Repo |
+|----------------|---------|------|
+| ntopng & netflow2ng | network observability utilizing netflow | [Github](https://github.com/Smittyman50/ntopng-netflow2ng-homelab) |
+
 ### Storage (TrueNAS SCALE)
 
 TrueNAS SCALE provides ZFS-backed storage for the lab.
@@ -142,12 +148,6 @@ Examples of services hosted in the lab:
 - Local LLM inference (Ollama with Open WebUI)  
 - PKM automation and note processing  
 - Supporting APIs and utility scripts
-
-### Docker Applications
-
-| Application(s) | Purpose | Repo |
-|----------------|---------|------|
-| ntopng & netflow2ng | network observability utilizing netflow | [Github](https://github.com/Smittyman50/ntopng-netflow2ng-homelab) |
 
 ---
 
