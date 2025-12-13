@@ -176,11 +176,12 @@ header .cert-badges {
 }
 
 .page-updated {
-  margin-top: 1.5rem;
-  padding-top: 0.75rem;
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+  text-align: right;
+  opacity: 0.7;
   border-top: 1px solid rgba(255,255,255,0.2);
-  font-size: 0.9rem;
-  opacity: 0.85;
 }
 
 /* Desktop / large screens: fluid layout that scales with window size */
