@@ -53,6 +53,7 @@ This site is organized into a few focus areas:
 - [Email](mailto:1973.mjsmith@gmail.com)
 
 <div class="page-footer">
+  <span class="page-back"> </span>
   <span class="page-updated">
     Last updated: {{ page.last_updated }}
   </span>
