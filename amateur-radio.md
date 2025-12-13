@@ -1,3 +1,8 @@
+---
+layout: default
+last_updated: 2025-12-13
+---
+
 [← Back to Home](./index.md)
 
 # Amateur Radio
@@ -152,5 +157,3 @@ LoRa nodes report into my home lab, where I can monitor behavior, log received f
     Last updated: {{ page.last_updated }}
   </span>
 </div>
-
-[← Back to Home](./index.md)

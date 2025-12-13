@@ -180,15 +180,16 @@ header .cert-badges {
   justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
-  font-size: 0.75rem;
-  opacity: 0.75;
 }
 
 .page-footer a {
   text-decoration: none;
+  /* inherits normal font size from the page */
 }
 
 .page-updated {
+  font-size: 0.75rem;
+  opacity: 0.7;
   text-align: right;
 }
 
