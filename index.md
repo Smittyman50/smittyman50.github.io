@@ -52,10 +52,10 @@ This site is organized into a few focus areas:
 - [GitHub](https://github.com/smittyman50)
 - [Email](mailto:1973.mjsmith@gmail.com)
 
-<footer class="site-footer">
+<div class="page-updated">
   {% if page.last_updated %}
-    <p>Last updated: {{ page.last_updated }}</p>
+    Last updated: {{ page.last_updated }}
   {% endif %}
-</footer>
+</div>
 
 <!-- trigger rebuild -->
