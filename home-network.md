@@ -109,6 +109,12 @@ Typical workloads include:
 
 Both LXC and Docker-based services run in this environment depending on the task.
 
+**Docker-based Utilities**
+
+| Utility | Purpose | Repo |
+|---------|---------|------|
+| ntopng & netflow2ng | network observability utilizing netflow | [Github](https://github.com/Smittyman50/ntopng-netflow2ng-homelab) |
+
 **Raspberry Pi Systems**
 
 In addition to Proxmox, several Raspberry Pi devices provide flexible compute for smaller projects and testing.
