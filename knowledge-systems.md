@@ -1,3 +1,8 @@
+---
+layout: default
+last_updated: 2025-12-13
+---
+
 [← Back to Home](./index.md)
 
 # Knowledge Systems & Second Brain
@@ -220,4 +225,9 @@ This knowledge system is a force multiplier that enables me to:
 
 It integrates my technical background, homelab capabilities, academic work, and personal research/experimentation into a unified, scalable knowledge ecosystem.
 
-[← Back to Home](./index.md)
+<div class="page-footer">
+  <a class="page-back" href="{{ '/' | relative_url }}">← Back to Home</a>
+  <span class="page-updated">
+    Last updated: {{ page.last_updated }}
+  </span>
+</div>

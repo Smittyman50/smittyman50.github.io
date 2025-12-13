@@ -1,5 +1,6 @@
 ---
 layout: default
+last_updated: 2025-12-13
 ---
 
 [← Back to Home](./index.md)
@@ -153,4 +154,9 @@ Automation in the lab uses:
 
 More detailed examples are available on the **[Network Design & Automation](./network-automation.md)** page.
 
-[← Back to Home](./index.md)
+<div class="page-footer">
+  <a class="page-back" href="{{ '/' | relative_url }}">← Back to Home</a>
+  <span class="page-updated">
+    Last updated: {{ page.last_updated }}
+  </span>
+</div>
