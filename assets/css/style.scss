@@ -161,9 +161,9 @@ header .cert-badges {
   position: relative;
   width: 100%;
   max-height: 80vh;
-  overflow: hidden;       // Panzoom handles panning inside
-  border: 1px solid #444;
-  background: #000;
+  overflow: hidden;       /* Panzoom handles panning inside */
+  border: none !important;
+  background: transparent !important;  /* no visible frame */
 }
 
 /* Image inside the viewer: Panzoom will transform this element */
@@ -173,6 +173,10 @@ header .cert-badges {
   max-height: none;
   width: 100%;            // start fitted to container
   height: auto;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 
 .page-footer {
