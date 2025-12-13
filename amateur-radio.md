@@ -152,9 +152,7 @@ My LoRa projects focus on:
 LoRa nodes report into my home lab, where I can monitor behavior, log received frames, and evaluate how well different configurations perform. Over time, I expect to expand this into more structured telemetry and data collection, but for now it remains an RF-focused experimentation platform rather than an application stack.
 
 <div class="page-footer">
-
-  [← Back to Home](./index.md)
-
+  <a class="page-back" href="{{ '/' | relative_url }}">← Back to Home</a>
   <span class="page-updated">
     Last updated: {{ page.last_updated }}
   </span>
