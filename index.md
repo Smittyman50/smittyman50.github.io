@@ -1,5 +1,6 @@
 ---
 layout: default
+last_updated: 2025-12-13
 ---
 
 **Strategic IT Leader** | **CISSP, PMP, AWS Certified** | **Enterprise Networking, Cloud Architecture, & AI/ML Expert**
@@ -50,5 +51,11 @@ This site is organized into a few focus areas:
 - [LinkedIn](https://www.linkedin.com/in/michaeljsmith35)
 - [GitHub](https://github.com/smittyman50)
 - [Email](mailto:1973.mjsmith@gmail.com)
+
+<footer class="site-footer">
+  {% if page.last_updated %}
+    <p>Last updated: {{ page.last_updated }}</p>
+  {% endif %}
+</footer>
 
 <!-- trigger rebuild -->
