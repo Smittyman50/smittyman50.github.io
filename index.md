@@ -1,6 +1,6 @@
 ---
 layout: default
-last_updated: 2025-12-13
+last_updated: 2026-01-05
 ---
 
 **Strategic IT Leader** | **CISSP, PMP, AWS Certified** | **Enterprise Networking, Cloud Architecture, & AI/ML Expert**
