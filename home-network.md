@@ -1,6 +1,6 @@
 ---
 layout: default
-last_updated: 2025-12-13
+last_updated: 2026-01-06
 ---
 
 [← Back to Home](./index.md)
@@ -157,6 +157,8 @@ Automation in the lab uses:
 - **Terraform** for provisioning resources  
 - **Ansible** for configuring hosts and services  
 - **Python** for utility tooling and workflow automation  
+
+Infrastructure changes are executed through a CI/CD pipeline backed by self-hosted Gitea Runners. Code commits trigger automated workflows that perform Terraform plan/apply operations and Ansible playbook runs, enabling repeatable, version-controlled builds of VMs, containers, and services across the lab. This approach mirrors enterprise DevOps practices while maintaining full control over the toolchain and execution environment.
 
 More detailed examples are available on the **[Network Design & Automation](./network-automation.md)** page.
 
