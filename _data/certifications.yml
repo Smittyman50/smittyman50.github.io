@@ -18,6 +18,10 @@
   css: aws-found
   url: https://www.credly.com/badges/ca3adaff-9420-4f85-a164-dadf13e70ee4
 
+- name: Google AI Professional
+  css: goog-cert
+  url: https://www.credly.com/badges/820b7ea6-bfe5-4fdb-b12a-e52783e6d104
+
 - name: CISSP
   css: sec
   url: https://www.credly.com/badges/5d2c635c-08c4-468f-9c27-50a00c30956c
