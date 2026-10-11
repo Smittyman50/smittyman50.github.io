@@ -1,6 +1,6 @@
 ---
 layout: default
-last_updated: 2026-01-05
+last_updated: 2026-10-11
 ---
 
 [← Back to Home](./index.md)
@@ -17,6 +17,7 @@ This page contains selected examples of network architectures, cloud connectivit
 |---------|----------|------------|------|
 | **infra-platform** | Reusable infrastructure building blocks used by multiple environment-specific stacks in my homelab. | Terraform, Ansible | [GitHub](https://github.com/Smittyman50/infra-platform) |
 | **stack-samba4-dc** | Defines a complete, deployable stack for provisioning and maintaining Samba4 Active Directory Domain Controllers in my homelab. | Terraform, Ansible | [GitHub](https://github.com/Smittyman50/stack-samba4-dc) |
+| **rpi5-debian** | Builds and publishes an unattended network installer for Raspberry Pi 5s: a Pi HTTP-boots into RAM, installs Debian 12 to NVMe, then configures itself on first boot from a cloud-init seed tied to its serial number. | Gitea Actions, Bash, Python/Jinja2, cloud-init, MinIO | [GitHub](https://github.com/Smittyman50/rpi5-debian) |
 
 <div class="page-footer">
   <a class="page-back" href="{{ '/' | relative_url }}">← Back to Home</a>
