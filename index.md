@@ -1,6 +1,6 @@
 ---
 layout: default
-last_updated: 2026-01-05
+last_updated: 2026-10-11
 ---
 
 **Engineering and Technology Executive** | **Mission-Critical Systems** | **Cloud, Automation, Networking & AI/ML**
@@ -29,6 +29,7 @@ This site is organized into a few focus areas:
 
 ## 📰 Articles & Thought Leadership
 
+- [From Commit to Pi: Network Booting and Role-Based Provisioning for Raspberry Pi 5 with Gitea Actions](https://www.linkedin.com/pulse/from-commit-pi-network-booting-role-based-raspberry-5-mike-smith-fouue)
 - [From Commits to Controllers: Treating Identity Infrastructure as Code in My Home Lab](https://www.linkedin.com/pulse/from-commits-controllers-treating-identity-code-my-home-mike-smith-k360e)
 - [Observability with Intent: Extending My Home Lab with NetFlow and ntopng](https://www.linkedin.com/pulse/observability-intent-extending-my-home-lab-netflow-ntopng-mike-smith-hi9ne)
 - [Learning From the Past: What the 2002 WorldCom Layoffs Can Teach Us About Resilience in Today’s Verizon Restructuring](https://www.linkedin.com/pulse/learning-from-past-what-2002-worldcom-layoffs-can-teach-mike-smith-zxhvc)
