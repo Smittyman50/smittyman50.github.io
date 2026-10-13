@@ -1,6 +1,6 @@
 ---
 layout: default
-last_updated: 2025-12-13
+last_updated: 2026-10-13
 ---
 
 [← Back to Home](./index.md)
@@ -13,6 +13,7 @@ This section highlights my hands-on work in applied machine learning and model d
 |---------|----------|------------|------|
 | **Emotion Recognition (CNN)** | Convolutional neural network trained on labeled facial expressions with reproducible pipeline + artifact management. | TensorFlow, Keras, NumPy, scikit-learn | [GitHub](https://github.com/Smittyman50/Emotion-Recognition-CNN) |
 | **Text Emotion Classifier** | Classical ML with TF-IDF + MNB, model promotion using macro-F1 leaderboard. | Python, scikit-learn | [GitHub](https://github.com/Smittyman50/Text-Emotion-NB) |
+| **KiCad AI** | Evidence-gated multi-agent pipeline from requirements to reviewed KiCad schematic and placed PCB; LLMs transform, deterministic code verifies and drives KiCad. | Python, PydanticAI, LangGraph, Ollama, MCP, KiCad | [GitHub](https://github.com/Smittyman50/kicad-ai) |
 
 <div class="page-footer">
   <a class="page-back" href="{{ '/' | relative_url }}">← Back to Home</a>

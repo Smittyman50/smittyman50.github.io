@@ -1,6 +1,6 @@
 ---
 layout: default
-last_updated: 2026-10-11
+last_updated: 2026-10-13
 ---
 
 **Engineering and Technology Executive** | **Mission-Critical Systems** | **Cloud, Automation, Networking & AI/ML**
@@ -29,6 +29,7 @@ This site is organized into a few focus areas:
 
 ## 📰 Articles & Thought Leadership
 
+- [Evidence Before Electrons: Building a Local, Agent-Driven Workflow for Designing Hardware in KiCad](https://www.linkedin.com/pulse/evidence-before-electrons-building-local-agent-driven-mike-smith-forpe)
 - [From Commit to Pi: Network Booting and Role-Based Provisioning for Raspberry Pi 5 with Gitea Actions](https://www.linkedin.com/pulse/from-commit-pi-network-booting-role-based-raspberry-5-mike-smith-fouue)
 - [From Commits to Controllers: Treating Identity Infrastructure as Code in My Home Lab](https://www.linkedin.com/pulse/from-commits-controllers-treating-identity-code-my-home-mike-smith-k360e)
 - [Observability with Intent: Extending My Home Lab with NetFlow and ntopng](https://www.linkedin.com/pulse/observability-intent-extending-my-home-lab-netflow-ntopng-mike-smith-hi9ne)
